@@ -35,12 +35,12 @@ static Il2CppMethodPointer s_methodPointers[6] =
 };
 static const int32_t s_InvokerIndices[6] = 
 {
-	8031,
-	6442,
-	8285,
-	6558,
-	6442,
-	8285,
+	9028,
+	7224,
+	9305,
+	7354,
+	7224,
+	9305,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_Meta_Voice_Samples_LightTraits_CodeGenModule;
 const Il2CppCodeGenModule g_Meta_Voice_Samples_LightTraits_CodeGenModule = 

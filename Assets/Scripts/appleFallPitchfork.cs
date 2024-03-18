@@ -22,7 +22,7 @@ public class appleFallPitchfork : MonoBehaviour
         
         if (collision.gameObject.CompareTag("Pitchfork"))
         {
-            Debug.Log("AHHHHHHHHHHHHHHHH");
+            
             gameObject.GetComponentInParent<Rigidbody>().isKinematic = false;
             gameObject.GetComponentInParent<Rigidbody>().useGravity = true;
 

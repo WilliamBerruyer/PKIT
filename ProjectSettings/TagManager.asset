@@ -7,6 +7,7 @@ TagManager:
   - SamplesInfoPanel
   - Apple
   - Pitchfork
+  - Bucket
   layers:
   - Default
   - TransparentFX

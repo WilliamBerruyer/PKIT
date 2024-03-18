@@ -34,6 +34,28 @@ struct VirtualFuncInvoker0
 		return ((Func)invokeData.methodPtr)(obj, invokeData.method);
 	}
 };
+template <typename R, typename T1, typename T2>
+struct VirtualFuncInvoker2
+{
+	typedef R (*Func)(void*, T1, T2, const RuntimeMethod*);
+
+	static inline R Invoke (Il2CppMethodSlot slot, RuntimeObject* obj, T1 p1, T2 p2)
+	{
+		const VirtualInvokeData& invokeData = il2cpp_codegen_get_virtual_invoke_data(slot, obj);
+		return ((Func)invokeData.methodPtr)(obj, p1, p2, invokeData.method);
+	}
+};
+template <typename R, typename T1, typename T2, typename T3>
+struct VirtualFuncInvoker3
+{
+	typedef R (*Func)(void*, T1, T2, T3, const RuntimeMethod*);
+
+	static inline R Invoke (Il2CppMethodSlot slot, RuntimeObject* obj, T1 p1, T2 p2, T3 p3)
+	{
+		const VirtualInvokeData& invokeData = il2cpp_codegen_get_virtual_invoke_data(slot, obj);
+		return ((Func)invokeData.methodPtr)(obj, p1, p2, p3, invokeData.method);
+	}
+};
 template <typename R>
 struct InterfaceFuncInvoker0
 {
@@ -106,6 +128,8 @@ struct CalendarIdU5BU5D_t559EDBF1B819A695624BE9004EAA4FFA38B65CDA;
 struct CharU5BU5D_t799905CF001DD5F13F7DBB310181FC4D8B7D0AAB;
 // System.Delegate[]
 struct DelegateU5BU5D_tC5AB7E8F745616680F337909D3A8E6C722CDF771;
+// System.Globalization.EraInfo[]
+struct EraInfoU5BU5D_t3FC74518173AF52EC901FC118D4BD9A11DE89BAC;
 // System.Int32[]
 struct Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C;
 // System.IntPtr[]
@@ -122,6 +146,8 @@ struct StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248;
 struct TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB;
 // System.Globalization.DateTimeFormatInfo/TokenHashValue[]
 struct TokenHashValueU5BU5D_t3F8794937D04BA380989A813F33418CED58E80B9;
+// System.Globalization.UmAlQuraCalendar/DateMapping[]
+struct DateMappingU5BU5D_tAE26CCACFFC820ECD4675D0D35E04EF7D2A7BA0A;
 // System.ArgumentException
 struct ArgumentException_tAD90411542A20A9C72D5CDA3A84181D8B947A263;
 // System.ArgumentNullException
@@ -158,12 +184,16 @@ struct EncoderFallback_tD2C40CE114AA9D8E1F7196608B2D088548015293;
 struct Encoding_t65CDEF28CF20A7B8C92E85A4E808920C2465F095;
 // System.Enum
 struct Enum_t2A1A94B24E3B776EEF4E5E485E290BB9D4D072E2;
+// System.Globalization.EraInfo
+struct EraInfo_t93ABF7759E8286C5F600445DF5B6C72AAB351921;
 // System.Exception
 struct Exception_t;
 // System.Threading.ExecutionContext
 struct ExecutionContext_t9D6EDFD92F0B2D391751963E2D77A8B03CB81710;
 // System.Globalization.GregorianCalendar
 struct GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815;
+// System.Globalization.GregorianCalendarHelper
+struct GregorianCalendarHelper_tC77507376E36EEDABC1786237BADF1BF459F9723;
 // System.Collections.IDictionary
 struct IDictionary_t6D03155AF1FA9083817AA5B6AD7DEEACC26AB220;
 // System.IFormatProvider
@@ -208,10 +238,14 @@ struct StringBuilder_t;
 struct StringComparer_t6268F19CA34879176651429C0D8A3D0002BB8E06;
 // System.Globalization.TextInfo
 struct TextInfo_tD3BAFCFD77418851E7D5CB8D2588F47019E414B4;
+// System.Globalization.ThaiBuddhistCalendar
+struct ThaiBuddhistCalendar_t0A8D34CFB2617DDFE81F878C8E404971CFA70715;
 // System.Threading.Thread
 struct Thread_t0A773B9DE873D2DCAA7D229EAB36757B500E207F;
 // System.Type
 struct Type_t;
+// System.Globalization.UmAlQuraCalendar
+struct UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B;
 // System.Void
 struct Void_t4861ACF8F4594C3437BB48B6E56783494B843915;
 // System.Globalization.CultureInfo/OnCultureInfoChangedDelegate
@@ -234,16 +268,23 @@ IL2CPP_EXTERN_C RuntimeClass* CompareOptions_tE5E7275E1FCBD5F8F3B53CC0038A11CABE
 IL2CPP_EXTERN_C RuntimeClass* CultureData_tEEFDCF4ECA1BBF6C0C8C94EB3541657245598F9D_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8FFA378E0_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* CultureNotFoundException_t8088EAAA2DB1C1D01F4B6C3254D191A483A7EE0F_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* DateMappingU5BU5D_tAE26CCACFFC820ECD4675D0D35E04EF7D2A7BA0A_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* DateTimeFormatInfo_t0457520F9FA7B5C8EAAEB3AD50413B6AEEB7458A_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Dictionary_2_t4A66E55DEE67263E1D7B09B4693FD0F41C204B21_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Dictionary_2_t5C8F46F5D57502270DD9E1DA8303B23C7FE85588_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Dictionary_2_t9FA6D82CAFC18769F7515BB51D1C56DAE09381C3_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Dictionary_2_tE1603CE612C16451D1E56FF4D4859D4FE4087C28_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* EncodingTable_t7E8487AA3AF93A542BCB5CD07480C5ED1BCBFBF9_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* EraInfoU5BU5D_t3FC74518173AF52EC901FC118D4BD9A11DE89BAC_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* EraInfo_t93ABF7759E8286C5F600445DF5B6C72AAB351921_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* GlobalizationMode_t8C0DD244B8C6347DE7AB7AE83B10911D2EB7582A_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* GregorianCalendarHelper_tC77507376E36EEDABC1786237BADF1BF459F9723_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* ICollection_t37E7B9DC5B4EF41D190D607F92835BF1171C0E8E_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Int16U5BU5D_t8175CE8DD9C9F9FB0CF4F58E45BC570575B43CFB_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* InternalCodePageDataItemU5BU5D_t33622E365514085FB25BF5886B358FC250BFD1B4_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* InternalEncodingDataItemU5BU5D_t49FE80FF7C98C9D6DA8B7F41AF7F053B2B4B387E_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB_il2cpp_TypeInfo_var;
@@ -259,7 +300,9 @@ IL2CPP_EXTERN_C RuntimeClass* String_t_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* TextInfoToLowerData_tCE2447B8B81C36524942850B5CAF014C0849DA3A_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* TextInfoToUpperData_tFBD90672D05C6FCC5E42201C4AA643040CB20F66_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* TextInfo_tD3BAFCFD77418851E7D5CB8D2588F47019E414B4_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* ThaiBuddhistCalendar_t0A8D34CFB2617DDFE81F878C8E404971CFA70715_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Type_t_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeField* U3CPrivateImplementationDetailsU3E_t9FFB0BEB067161CE52A63D5857FEA61F74F17A50____1199C3B39A2FA058EFF5B3829616AE81EE2B59A51D89C107A5FA4B6FEF95DD16_7_FieldInfo_var;
 IL2CPP_EXTERN_C RuntimeField* U3CPrivateImplementationDetailsU3E_t9FFB0BEB067161CE52A63D5857FEA61F74F17A50____1C4B3A80ED7AEC83916479BCE280E1258D5785D07F0EA22A5E27592ACCAE692B_13_FieldInfo_var;
 IL2CPP_EXTERN_C RuntimeField* U3CPrivateImplementationDetailsU3E_t9FFB0BEB067161CE52A63D5857FEA61F74F17A50____1F38DEB3F70291588D06D3830D0D4241CE0570C9F4EE8B00F606C4753EB016E2_14_FieldInfo_var;
@@ -268,6 +311,7 @@ IL2CPP_EXTERN_C RuntimeField* U3CPrivateImplementationDetailsU3E_t9FFB0BEB067161
 IL2CPP_EXTERN_C RuntimeField* U3CPrivateImplementationDetailsU3E_t9FFB0BEB067161CE52A63D5857FEA61F74F17A50____543172FF9822CE5240DF89FF3AD8C7FD9824F97D0EED9B1432E60345FBBDE9A9_35_FieldInfo_var;
 IL2CPP_EXTERN_C RuntimeField* U3CPrivateImplementationDetailsU3E_t9FFB0BEB067161CE52A63D5857FEA61F74F17A50____61D639BE11384EE21CDE2B40357F4F9D80A106C97C592D18A9F4CAA442CA5D31_41_FieldInfo_var;
 IL2CPP_EXTERN_C RuntimeField* U3CPrivateImplementationDetailsU3E_t9FFB0BEB067161CE52A63D5857FEA61F74F17A50____71F7F6B226CBC11C8B26D506869FAE022928427389882579DB316F36FF34A096_47_FieldInfo_var;
+IL2CPP_EXTERN_C RuntimeField* U3CPrivateImplementationDetailsU3E_t9FFB0BEB067161CE52A63D5857FEA61F74F17A50____7BEC6AD454781FDCD8D475B3418629CBABB3BF9CA66FA80009D608A1A60D0696_52_FieldInfo_var;
 IL2CPP_EXTERN_C RuntimeField* U3CPrivateImplementationDetailsU3E_t9FFB0BEB067161CE52A63D5857FEA61F74F17A50____86BDA34D2165AC08F2DE4918B302E44205CDEA674FCA7F2C7F56D4F12D8B0C73_59_FieldInfo_var;
 IL2CPP_EXTERN_C RuntimeField* U3CPrivateImplementationDetailsU3E_t9FFB0BEB067161CE52A63D5857FEA61F74F17A50____95BDE712712F10D07813AE3DEEA40D1F38E3FCF1A92CC435F17A326CC22242EB_65_FieldInfo_var;
 IL2CPP_EXTERN_C RuntimeField* U3CPrivateImplementationDetailsU3E_t9FFB0BEB067161CE52A63D5857FEA61F74F17A50____964889A5283FD0A3DFC8AE256721E6F67B8212FD6841AB1C821DE3134DE79B07_66_FieldInfo_var;
@@ -340,9 +384,11 @@ IL2CPP_EXTERN_C String_t* _stringLiteral1B62E5629805E3224249BCAA0D9ECBB4C84AE48B
 IL2CPP_EXTERN_C String_t* _stringLiteral1BF75D716AB73EE0DD6120B260801199C4D6D629;
 IL2CPP_EXTERN_C String_t* _stringLiteral1C126604F817B7F255ECDA992B0BFBE5BFD45D36;
 IL2CPP_EXTERN_C String_t* _stringLiteral1C6242A9F1A0B1B9CAA8B9EB79EB179C2CEA2DAC;
+IL2CPP_EXTERN_C String_t* _stringLiteral1CB28FC33FA49E778D66797930C2FE5381A2660D;
 IL2CPP_EXTERN_C String_t* _stringLiteral1D598003427162E47FD85084FBD67BDA5F77BF6D;
 IL2CPP_EXTERN_C String_t* _stringLiteral1D64C41157A5F60D2602D0C23956EA019CBFF506;
 IL2CPP_EXTERN_C String_t* _stringLiteral1D84D91751D70ACE8BFBBBF2228F414B00120791;
+IL2CPP_EXTERN_C String_t* _stringLiteral1DEDCD1168FE0A01C595FF5B7901D1C14F15F786;
 IL2CPP_EXTERN_C String_t* _stringLiteral1F5D4C30C31CDFD287D95CE65D9729D7D50BE944;
 IL2CPP_EXTERN_C String_t* _stringLiteral1FAD5F459796535C69B7596F77C500F18530E8BB;
 IL2CPP_EXTERN_C String_t* _stringLiteral1FC7942BC388C445A659AE367266C1BA4AB5DC3C;
@@ -388,6 +434,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteral2F88237DA9EEF9278C58EF260CA7B6DEEA490B32
 IL2CPP_EXTERN_C String_t* _stringLiteral2FA72CE288DED374E3C5800504A871C4B15D53E5;
 IL2CPP_EXTERN_C String_t* _stringLiteral30063E5580FD80BAFCEF07C3A0CD92ED57087EE7;
 IL2CPP_EXTERN_C String_t* _stringLiteral3032078B94A75B1B8F1974263D0356F64A786744;
+IL2CPP_EXTERN_C String_t* _stringLiteral30D99F99F1F4688CE08A3BF1B034C9CD49C19174;
 IL2CPP_EXTERN_C String_t* _stringLiteral3148EA34EBF4846E4B60EDA4AEA0728A87DD2923;
 IL2CPP_EXTERN_C String_t* _stringLiteral315BB4888796BCFA256CA1E64AA54EF50294ACB2;
 IL2CPP_EXTERN_C String_t* _stringLiteral31E81343A34A1F26AA4EBC260600B88B7EBF1E73;
@@ -403,6 +450,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteral35B44AA64754DEDC52915E7F763C081CF5B004D9
 IL2CPP_EXTERN_C String_t* _stringLiteral37156B825B95C01FFB6E64C0E9005726FB8BB3C9;
 IL2CPP_EXTERN_C String_t* _stringLiteral38B70424F5891D0E77B0B0A0C6F81F97F6DD1233;
 IL2CPP_EXTERN_C String_t* _stringLiteral38E2D61DF26BB16DB5C12B6BD9E18DCED3861C8A;
+IL2CPP_EXTERN_C String_t* _stringLiteral38E3DBC7FC353425EF3A98DC8DAC6689AF5FD1BE;
 IL2CPP_EXTERN_C String_t* _stringLiteral3915A096ACD919832A1C4E84ABDC7D6F6B72630D;
 IL2CPP_EXTERN_C String_t* _stringLiteral394CD7441751DCABE9FA491F8E99089DD1CE1CA8;
 IL2CPP_EXTERN_C String_t* _stringLiteral39DE5C5615DF0672164372086597A510034C7DF3;
@@ -425,6 +473,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteral45B32BC3E307E9C9B7AFD5A3977C5A3D8ECA731A
 IL2CPP_EXTERN_C String_t* _stringLiteral45FDAB90EA04E6C1CC4243C0FE7C9495B1F62A24;
 IL2CPP_EXTERN_C String_t* _stringLiteral461E95BC7238D808C5A5EFD70D8E6AC136950CA2;
 IL2CPP_EXTERN_C String_t* _stringLiteral4657BB61896390693CA4E3ADAEBFEC4EE2D304E5;
+IL2CPP_EXTERN_C String_t* _stringLiteral46F273EF641E07D271D91E0DC24A4392582671F8;
 IL2CPP_EXTERN_C String_t* _stringLiteral4791456D7FEEBB94073DB50AC8101EF32F96A665;
 IL2CPP_EXTERN_C String_t* _stringLiteral48370AA594235BF8B11D490FDBD847FCDF8B81BE;
 IL2CPP_EXTERN_C String_t* _stringLiteral4873500FF1B0F3BC4FF92F27C06E23814BFFBAC2;
@@ -452,6 +501,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteral5069B24FCE270E88C1171F62D54577A1AF85881F
 IL2CPP_EXTERN_C String_t* _stringLiteral5075F7DCA607BA7D32A84862B0E127315EAF310D;
 IL2CPP_EXTERN_C String_t* _stringLiteral50E5B859BE617DDE06C8372627497C55A46FCC3D;
 IL2CPP_EXTERN_C String_t* _stringLiteral5158EBB496D59F38480261ED3DC9356536F3224A;
+IL2CPP_EXTERN_C String_t* _stringLiteral51C6279E31F7483126B79E3000116001A915B690;
 IL2CPP_EXTERN_C String_t* _stringLiteral5204BE9DC83E65F70358D48FB17D94E257C49CE8;
 IL2CPP_EXTERN_C String_t* _stringLiteral529FF624DC83AE81328E80E036D128D6F38A8251;
 IL2CPP_EXTERN_C String_t* _stringLiteral539C6F7713F53E14105FBB0664E38C4C8E6F7C33;
@@ -474,6 +524,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteral5A77F39A7D12AD683F6A3CBC6022B063004CC254
 IL2CPP_EXTERN_C String_t* _stringLiteral5AF23720B2A92C8FB7E5A66960FC8110D661FFFA;
 IL2CPP_EXTERN_C String_t* _stringLiteral5BD591510B514AD07F89F3E5131F0B8C777ACE67;
 IL2CPP_EXTERN_C String_t* _stringLiteral5BFB046F8A244A5090ECD5F19EF3A6A728E2F5B7;
+IL2CPP_EXTERN_C String_t* _stringLiteral5C41D52FA73299672D15406F85174D906E9E65DC;
 IL2CPP_EXTERN_C String_t* _stringLiteral5C5B6FF00E25EE4ACC0830B1F455754D7F3FE489;
 IL2CPP_EXTERN_C String_t* _stringLiteral5D32010947348BA827DE80B62D9C67A3FC9C7C0A;
 IL2CPP_EXTERN_C String_t* _stringLiteral5DFBDBE341A434B99198FE2D3143110C3BDFD1BA;
@@ -494,6 +545,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteral6394E9C14476F7D3F63AAEC1B4AA70D896D97FF1
 IL2CPP_EXTERN_C String_t* _stringLiteral63B2A291AF64BAC9BB40447598948852CE65AB8D;
 IL2CPP_EXTERN_C String_t* _stringLiteral63BA93AC7CF41AB73D269CB243ACB3C694D877FB;
 IL2CPP_EXTERN_C String_t* _stringLiteral63CFBA5582585C60590B83132F78B2EF101A7005;
+IL2CPP_EXTERN_C String_t* _stringLiteral645F0B83FF7CADECF44AD1B83B13002DA97FBA1E;
 IL2CPP_EXTERN_C String_t* _stringLiteral647CF137C0F27918F699BD1C0B1DC7FF9EFC1014;
 IL2CPP_EXTERN_C String_t* _stringLiteral64A5E9680698425577D5D18E6CFC9BCF9EB06799;
 IL2CPP_EXTERN_C String_t* _stringLiteral64FDDBB3A17B80D53FC0D7EEDA16B4F2BADC8653;
@@ -568,6 +620,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteral82F3BE480580F58EE08D437D524BB2A9AD438EE4
 IL2CPP_EXTERN_C String_t* _stringLiteral83677DCCB7BB033AEF32E9B3A36A19419362B50D;
 IL2CPP_EXTERN_C String_t* _stringLiteral83F031400B2098F4599D57B3F13965382006909E;
 IL2CPP_EXTERN_C String_t* _stringLiteral840796F4F7DCA12041D96331C86838E766CD9F75;
+IL2CPP_EXTERN_C String_t* _stringLiteral8455E83F4C8C16B9441E2078DFC4C41497ECDC81;
 IL2CPP_EXTERN_C String_t* _stringLiteral85A68AFF2946E7E1CEE272D89FBF11790A0E4AB0;
 IL2CPP_EXTERN_C String_t* _stringLiteral867454E25B896EDD8B21D6E3F1655530B16A1D34;
 IL2CPP_EXTERN_C String_t* _stringLiteral86A0C51D8C4E2E335C4053A8507E258921697ACA;
@@ -636,6 +689,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteral9A0D3B313C33183E1D3E9E060CF84707894936D7
 IL2CPP_EXTERN_C String_t* _stringLiteral9AAA7AE1E1C11EC0AC6F4E185BB804D2E4E6A166;
 IL2CPP_EXTERN_C String_t* _stringLiteral9AC2639717B0C8F08D4E8EF97884719C1F0ECB13;
 IL2CPP_EXTERN_C String_t* _stringLiteral9BC27CC873FF88CFE25A314F254130F752D8C4BD;
+IL2CPP_EXTERN_C String_t* _stringLiteral9CC27BA3BECD4E1F318E7086721B8343044B6A04;
 IL2CPP_EXTERN_C String_t* _stringLiteral9DA041D2231D32A90EF4F6F1FC0F0BAD6BF2E938;
 IL2CPP_EXTERN_C String_t* _stringLiteral9E658C5A7A30384A6255D313E770B1E72BB33007;
 IL2CPP_EXTERN_C String_t* _stringLiteral9EBB3627BF7342DA0A07FB50F5D893E3928207E3;
@@ -668,6 +722,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteralA960A37FB3027FE0EECAAFCD4FA2BCF261D1A84F
 IL2CPP_EXTERN_C String_t* _stringLiteralA9F2F72EC097903379459E66142A4FAE526CD47F;
 IL2CPP_EXTERN_C String_t* _stringLiteralAAA41F61BEC452E6F089D2B83B5FB8F0C7FD9A43;
 IL2CPP_EXTERN_C String_t* _stringLiteralAAAEDCD13D6AA2725C362F76CDD04DEE55213BD2;
+IL2CPP_EXTERN_C String_t* _stringLiteralAABA6F39B93C5C2BCA72B3F4962E6929214F5CC7;
 IL2CPP_EXTERN_C String_t* _stringLiteralABAE0171A0834825BA10AD63EE94D0CB770E79BA;
 IL2CPP_EXTERN_C String_t* _stringLiteralABCFC79FB5EA10803465CCE46D4FCD4F752403AE;
 IL2CPP_EXTERN_C String_t* _stringLiteralAD63F1D29E0286BE1A73DCC6709A0E973FFB0681;
@@ -754,6 +809,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteralC9AB1C45E5D0C606882D9866DBF150A0B9E1054A
 IL2CPP_EXTERN_C String_t* _stringLiteralCA77C0A856CD34AB67CAA5B21F08006F28A80DE3;
 IL2CPP_EXTERN_C String_t* _stringLiteralCAA0C8F7F6608CE76808425C053EBAB157303805;
 IL2CPP_EXTERN_C String_t* _stringLiteralCAA8A5071675F3A9D5C0A15ADE9B723FFA3DDC4C;
+IL2CPP_EXTERN_C String_t* _stringLiteralCB6B67D4653121AE0F63EE256975A0DBD0FAF6B1;
 IL2CPP_EXTERN_C String_t* _stringLiteralCBCF5ABE35600EAFD21FA4DC1F78EBBBCAD041EB;
 IL2CPP_EXTERN_C String_t* _stringLiteralCCDB735EBFE1232C884044809B113C7B965194AC;
 IL2CPP_EXTERN_C String_t* _stringLiteralCD19CFCDDF728E2486E8E33056CDCF9A2C151902;
@@ -788,6 +844,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteralD4FBE0796B5BE81CF46AF1FACAB8F20F552269F5
 IL2CPP_EXTERN_C String_t* _stringLiteralD5093F308C0FF6C5A47B7C1BE33F1911A2324F86;
 IL2CPP_EXTERN_C String_t* _stringLiteralD5B20EA6805F285482807C61CD81D1509724E3CC;
 IL2CPP_EXTERN_C String_t* _stringLiteralD68508B50CDE1B2E777400476044304CB8149311;
+IL2CPP_EXTERN_C String_t* _stringLiteralD6E6EEF1109E8CC713826B01CDCD6A3C6C168B7A;
 IL2CPP_EXTERN_C String_t* _stringLiteralD744E0023ACB34526A1B142EFA90B5CFF45FDC53;
 IL2CPP_EXTERN_C String_t* _stringLiteralD7963396ADFCA253650F245E4585BA3406E68D1F;
 IL2CPP_EXTERN_C String_t* _stringLiteralD839DE8F0CC54F3BF02BD33A6AAD74B6E2423EB4;
@@ -867,6 +924,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteralF864D13E91227ACB7E851F91DC63AE38D43A6D8A
 IL2CPP_EXTERN_C String_t* _stringLiteralF88C8D9EA042A64D5322BEDA2551A1F9871ABB54;
 IL2CPP_EXTERN_C String_t* _stringLiteralF8B8AE95C29AAA25BAD7C4F07AC7757C74C11D0A;
 IL2CPP_EXTERN_C String_t* _stringLiteralFA3B5499785CBEEA66513CEE09402FBF10AF5FBF;
+IL2CPP_EXTERN_C String_t* _stringLiteralFAE2329D6E15DBA161C93E78324E39B842CF47E4;
 IL2CPP_EXTERN_C String_t* _stringLiteralFB09FA7ED7D5C1049E1BE87C18DFB91683B362CB;
 IL2CPP_EXTERN_C String_t* _stringLiteralFBA3AA80D39D383B93414A4A9FFA67E0FA457443;
 IL2CPP_EXTERN_C String_t* _stringLiteralFBC07F6BD47DF829ABDBABCE58B748504460B7BB;
@@ -908,7 +966,17 @@ IL2CPP_EXTERN_C const RuntimeMethod* EncodingTable_internalGetCodePageFromName_m
 IL2CPP_EXTERN_C const RuntimeMethod* SortKey_Compare_m0E2A6280FBC5C163A3549F9649143CA802508B64_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* SortKey__ctor_m7A809CA7B8C0AD0B2D17BA1870282FDFF999C687_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* SortKey__ctor_mC4A2198EF902E5F41B076873C69BD913D467732E_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ThaiBuddhistCalendar_ToFourDigitYear_m2B4137933846D693556A2C5068AC61C904174145_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ThaiBuddhistCalendar_set_TwoDigitYearMax_m8927EC2BCFC2AE7A00F2DF00352DF6C194BEE356_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Type_GetType_m50BCE4A0EB39D97381431E6CC2576C50DCE69C67_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* UmAlQuraCalendar_CheckEraRange_mDE9AA06043506EEA0A0928177B8ECFFD17C2D5E6_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* UmAlQuraCalendar_CheckTicksRange_mBA2959172A68F005AA5CA882A79BC94E6CB9E58B_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* UmAlQuraCalendar_CheckYearMonthRange_mD7B80AB6ADA0B466AEED666697FD1CBBF85136B8_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* UmAlQuraCalendar_CheckYearRange_mCEA99910DFF1659B5DD45B3C9A4502936A656E02_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* UmAlQuraCalendar_GetDatePart_m5CDAB4C4A0D261FF258EA853BC6039EC4B1A334D_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* UmAlQuraCalendar_ToDateTime_mA518A2073DCCFA2CEF560F22FD8D0FB8A6B9DDE7_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* UmAlQuraCalendar_ToFourDigitYear_m3C3B790D27276010B76DA0CD8295157330189BE8_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* UmAlQuraCalendar_set_TwoDigitYearMax_m38A5C335F6871E9DEEF444FAFF8EDC592232A389_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeType* CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8FFA378E0_0_0_0_var;
 IL2CPP_EXTERN_C const RuntimeType* DateTimeFormatInfo_t0457520F9FA7B5C8EAAEB3AD50413B6AEEB7458A_0_0_0_var;
 IL2CPP_EXTERN_C const RuntimeType* NumberFormatInfo_t8E26808B202927FEBF9064FCFEEA4D6E076E6472_0_0_0_var;
@@ -936,10 +1004,13 @@ struct ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031;
 struct CalendarDataU5BU5D_t3EA58E6D93950E285D96E39BE6D8872713DD25B0;
 struct CalendarIdU5BU5D_t559EDBF1B819A695624BE9004EAA4FFA38B65CDA;
 struct CharU5BU5D_t799905CF001DD5F13F7DBB310181FC4D8B7D0AAB;
+struct EraInfoU5BU5D_t3FC74518173AF52EC901FC118D4BD9A11DE89BAC;
+struct Int16U5BU5D_t8175CE8DD9C9F9FB0CF4F58E45BC570575B43CFB;
 struct Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C;
 struct InternalCodePageDataItemU5BU5D_t33622E365514085FB25BF5886B358FC250BFD1B4;
 struct InternalEncodingDataItemU5BU5D_t49FE80FF7C98C9D6DA8B7F41AF7F053B2B4B387E;
 struct StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248;
+struct DateMappingU5BU5D_tAE26CCACFFC820ECD4675D0D35E04EF7D2A7BA0A;
 
 IL2CPP_EXTERN_C_BEGIN
 IL2CPP_EXTERN_C_END
@@ -1515,6 +1586,27 @@ struct EncodingTable_t7E8487AA3AF93A542BCB5CD07480C5ED1BCBFBF9  : public Runtime
 {
 };
 
+// System.Globalization.EraInfo
+struct EraInfo_t93ABF7759E8286C5F600445DF5B6C72AAB351921  : public RuntimeObject
+{
+	// System.Int32 System.Globalization.EraInfo::era
+	int32_t ___era_0;
+	// System.Int64 System.Globalization.EraInfo::ticks
+	int64_t ___ticks_1;
+	// System.Int32 System.Globalization.EraInfo::yearOffset
+	int32_t ___yearOffset_2;
+	// System.Int32 System.Globalization.EraInfo::minEraYear
+	int32_t ___minEraYear_3;
+	// System.Int32 System.Globalization.EraInfo::maxEraYear
+	int32_t ___maxEraYear_4;
+	// System.String System.Globalization.EraInfo::eraName
+	String_t* ___eraName_5;
+	// System.String System.Globalization.EraInfo::abbrevEraName
+	String_t* ___abbrevEraName_6;
+	// System.String System.Globalization.EraInfo::englishEraName
+	String_t* ___englishEraName_7;
+};
+
 // System.Globalization.GlobalizationMode
 struct GlobalizationMode_t8C0DD244B8C6347DE7AB7AE83B10911D2EB7582A  : public RuntimeObject
 {
@@ -1725,6 +1817,13 @@ struct DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D
 	uint64_t ____dateData_46;
 };
 
+// System.Double
+struct Double_tE150EF3D1D43DEE85D533810AB4C742307EEDE5F 
+{
+	// System.Double System.Double::m_value
+	double ___m_value_0;
+};
+
 // System.Enum
 struct Enum_t2A1A94B24E3B776EEF4E5E485E290BB9D4D072E2  : public ValueType_t6D9B272BD21782F0A9A14F2E41F85A50E97A986F
 {
@@ -1745,11 +1844,25 @@ struct GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815  : public Cal
 	int32_t ___m_type_42;
 };
 
+// System.Int16
+struct Int16_tB8EF286A9C33492FA6E6D6E67320BE93E794A175 
+{
+	// System.Int16 System.Int16::m_value
+	int16_t ___m_value_0;
+};
+
 // System.Int32
 struct Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C 
 {
 	// System.Int32 System.Int32::m_value
 	int32_t ___m_value_0;
+};
+
+// System.Int64
+struct Int64_t092CFB123BE63C28ACDAF65C68F21A526050DBA3 
+{
+	// System.Int64 System.Int64::m_value
+	int64_t ___m_value_0;
 };
 
 // System.IntPtr
@@ -1816,6 +1929,13 @@ struct OrdinalComparer_tBB06915E213A5D4C8C617ED5478E8BF30C2B2170  : public Strin
 	bool ____ignoreCase_4;
 };
 
+// System.Globalization.ThaiBuddhistCalendar
+struct ThaiBuddhistCalendar_t0A8D34CFB2617DDFE81F878C8E404971CFA70715  : public Calendar_t0A117CC7532A54C17188C2EFEA1F79DB20DF3A3B
+{
+	// System.Globalization.GregorianCalendarHelper System.Globalization.ThaiBuddhistCalendar::helper
+	GregorianCalendarHelper_tC77507376E36EEDABC1786237BADF1BF459F9723* ___helper_43;
+};
+
 // System.Threading.Thread
 struct Thread_t0A773B9DE873D2DCAA7D229EAB36757B500E207F  : public CriticalFinalizerObject_t1DCAB623CAEA6529A96F5F3EDE3C7048A6E313C9
 {
@@ -1835,6 +1955,13 @@ struct Thread_t0A773B9DE873D2DCAA7D229EAB36757B500E207F  : public CriticalFinali
 	RuntimeObject* ___principal_13;
 	// System.Int32 System.Threading.Thread::principal_version
 	int32_t ___principal_version_14;
+};
+
+// System.TimeSpan
+struct TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A 
+{
+	// System.Int64 System.TimeSpan::_ticks
+	int64_t ____ticks_22;
 };
 
 // System.UInt16
@@ -2100,6 +2227,23 @@ struct Exception_t_marshaled_com
 	int32_t ___caught_in_unmanaged_16;
 };
 
+// System.Globalization.GregorianCalendarHelper
+struct GregorianCalendarHelper_tC77507376E36EEDABC1786237BADF1BF459F9723  : public RuntimeObject
+{
+	// System.Int32 System.Globalization.GregorianCalendarHelper::m_maxYear
+	int32_t ___m_maxYear_2;
+	// System.Int32 System.Globalization.GregorianCalendarHelper::m_minYear
+	int32_t ___m_minYear_3;
+	// System.Globalization.Calendar System.Globalization.GregorianCalendarHelper::m_Cal
+	Calendar_t0A117CC7532A54C17188C2EFEA1F79DB20DF3A3B* ___m_Cal_4;
+	// System.Globalization.EraInfo[] System.Globalization.GregorianCalendarHelper::m_EraInfo
+	EraInfoU5BU5D_t3FC74518173AF52EC901FC118D4BD9A11DE89BAC* ___m_EraInfo_5;
+	// System.Int32[] System.Globalization.GregorianCalendarHelper::m_eras
+	Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ___m_eras_6;
+	// System.DateTime System.Globalization.GregorianCalendarHelper::m_minDate
+	DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D ___m_minDate_7;
+};
+
 // System.OrdinalIgnoreCaseComparer
 struct OrdinalIgnoreCaseComparer_t8BAE11990A4C855D3BCBBFB42F4EF8D45088FBB0  : public OrdinalComparer_tBB06915E213A5D4C8C617ED5478E8BF30C2B2170
 {
@@ -2142,6 +2286,11 @@ struct TextInfo_tD3BAFCFD77418851E7D5CB8D2588F47019E414B4  : public RuntimeObjec
 	bool ___m_useUserOverride_9;
 	// System.Int32 System.Globalization.TextInfo::m_win32LangID
 	int32_t ___m_win32LangID_10;
+};
+
+// System.Globalization.UmAlQuraCalendar
+struct UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B  : public Calendar_t0A117CC7532A54C17188C2EFEA1F79DB20DF3A3B
+{
 };
 
 // System.Globalization.UmAlQuraCalendar/DateMapping
@@ -2404,6 +2553,10 @@ struct EncodingTable_t7E8487AA3AF93A542BCB5CD07480C5ED1BCBFBF9_StaticFields
 
 // System.Globalization.EncodingTable
 
+// System.Globalization.EraInfo
+
+// System.Globalization.EraInfo
+
 // System.Globalization.GlobalizationMode
 struct GlobalizationMode_t8C0DD244B8C6347DE7AB7AE83B10911D2EB7582A_StaticFields
 {
@@ -2559,6 +2712,10 @@ struct DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D_StaticFields
 
 // System.DateTime
 
+// System.Double
+
+// System.Double
+
 // System.Enum
 struct Enum_t2A1A94B24E3B776EEF4E5E485E290BB9D4D072E2_StaticFields
 {
@@ -2581,9 +2738,17 @@ struct GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815_StaticFields
 
 // System.Globalization.GregorianCalendar
 
+// System.Int16
+
+// System.Int16
+
 // System.Int32
 
 // System.Int32
+
+// System.Int64
+
+// System.Int64
 
 // System.IntPtr
 struct IntPtr_t_StaticFields
@@ -2605,6 +2770,15 @@ struct IntPtr_t_StaticFields
 // System.OrdinalComparer
 
 // System.OrdinalComparer
+
+// System.Globalization.ThaiBuddhistCalendar
+struct ThaiBuddhistCalendar_t0A8D34CFB2617DDFE81F878C8E404971CFA70715_StaticFields
+{
+	// System.Globalization.EraInfo[] System.Globalization.ThaiBuddhistCalendar::thaiBuddhistEraInfo
+	EraInfoU5BU5D_t3FC74518173AF52EC901FC118D4BD9A11DE89BAC* ___thaiBuddhistEraInfo_42;
+};
+
+// System.Globalization.ThaiBuddhistCalendar
 
 // System.Threading.Thread
 struct Thread_t0A773B9DE873D2DCAA7D229EAB36757B500E207F_StaticFields
@@ -2629,6 +2803,19 @@ struct Thread_t0A773B9DE873D2DCAA7D229EAB36757B500E207F_ThreadStaticFields
 	// System.Threading.Thread System.Threading.Thread::current_thread
 	Thread_t0A773B9DE873D2DCAA7D229EAB36757B500E207F* ___current_thread_9;
 };
+
+// System.TimeSpan
+struct TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A_StaticFields
+{
+	// System.TimeSpan System.TimeSpan::Zero
+	TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A ___Zero_19;
+	// System.TimeSpan System.TimeSpan::MaxValue
+	TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A ___MaxValue_20;
+	// System.TimeSpan System.TimeSpan::MinValue
+	TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A ___MinValue_21;
+};
+
+// System.TimeSpan
 
 // System.UInt16
 
@@ -2667,6 +2854,17 @@ struct Exception_t_StaticFields
 
 // System.Exception
 
+// System.Globalization.GregorianCalendarHelper
+struct GregorianCalendarHelper_tC77507376E36EEDABC1786237BADF1BF459F9723_StaticFields
+{
+	// System.Int32[] System.Globalization.GregorianCalendarHelper::DaysToMonth365
+	Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ___DaysToMonth365_0;
+	// System.Int32[] System.Globalization.GregorianCalendarHelper::DaysToMonth366
+	Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ___DaysToMonth366_1;
+};
+
+// System.Globalization.GregorianCalendarHelper
+
 // System.OrdinalIgnoreCaseComparer
 
 // System.OrdinalIgnoreCaseComparer
@@ -2687,6 +2885,19 @@ struct TextInfo_tD3BAFCFD77418851E7D5CB8D2588F47019E414B4_StaticFields
 };
 
 // System.Globalization.TextInfo
+
+// System.Globalization.UmAlQuraCalendar
+struct UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_StaticFields
+{
+	// System.Globalization.UmAlQuraCalendar/DateMapping[] System.Globalization.UmAlQuraCalendar::HijriYearInfo
+	DateMappingU5BU5D_tAE26CCACFFC820ECD4675D0D35E04EF7D2A7BA0A* ___HijriYearInfo_42;
+	// System.DateTime System.Globalization.UmAlQuraCalendar::minDate
+	DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D ___minDate_43;
+	// System.DateTime System.Globalization.UmAlQuraCalendar::maxDate
+	DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D ___maxDate_44;
+};
+
+// System.Globalization.UmAlQuraCalendar
 
 // System.Globalization.UmAlQuraCalendar/DateMapping
 
@@ -2751,6 +2962,140 @@ struct Type_t_StaticFields
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
+// System.Globalization.EraInfo[]
+struct EraInfoU5BU5D_t3FC74518173AF52EC901FC118D4BD9A11DE89BAC  : public RuntimeArray
+{
+	ALIGN_FIELD (8) EraInfo_t93ABF7759E8286C5F600445DF5B6C72AAB351921* m_Items[1];
+
+	inline EraInfo_t93ABF7759E8286C5F600445DF5B6C72AAB351921* GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline EraInfo_t93ABF7759E8286C5F600445DF5B6C72AAB351921** GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, EraInfo_t93ABF7759E8286C5F600445DF5B6C72AAB351921* value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+	inline EraInfo_t93ABF7759E8286C5F600445DF5B6C72AAB351921* GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline EraInfo_t93ABF7759E8286C5F600445DF5B6C72AAB351921** GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, EraInfo_t93ABF7759E8286C5F600445DF5B6C72AAB351921* value)
+	{
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+};
+// System.Int32[]
+struct Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C  : public RuntimeArray
+{
+	ALIGN_FIELD (8) int32_t m_Items[1];
+
+	inline int32_t GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline int32_t* GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, int32_t value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+	}
+	inline int32_t GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline int32_t* GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, int32_t value)
+	{
+		m_Items[index] = value;
+	}
+};
+// System.Globalization.UmAlQuraCalendar/DateMapping[]
+struct DateMappingU5BU5D_tAE26CCACFFC820ECD4675D0D35E04EF7D2A7BA0A  : public RuntimeArray
+{
+	ALIGN_FIELD (8) DateMapping_tD71D0AF5C7C6CB4F9517C292B1B61D7AF7CFCCFD m_Items[1];
+
+	inline DateMapping_tD71D0AF5C7C6CB4F9517C292B1B61D7AF7CFCCFD GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline DateMapping_tD71D0AF5C7C6CB4F9517C292B1B61D7AF7CFCCFD* GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, DateMapping_tD71D0AF5C7C6CB4F9517C292B1B61D7AF7CFCCFD value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+	}
+	inline DateMapping_tD71D0AF5C7C6CB4F9517C292B1B61D7AF7CFCCFD GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline DateMapping_tD71D0AF5C7C6CB4F9517C292B1B61D7AF7CFCCFD* GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, DateMapping_tD71D0AF5C7C6CB4F9517C292B1B61D7AF7CFCCFD value)
+	{
+		m_Items[index] = value;
+	}
+};
+// System.Int16[]
+struct Int16U5BU5D_t8175CE8DD9C9F9FB0CF4F58E45BC570575B43CFB  : public RuntimeArray
+{
+	ALIGN_FIELD (8) int16_t m_Items[1];
+
+	inline int16_t GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline int16_t* GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, int16_t value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+	}
+	inline int16_t GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline int16_t* GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, int16_t value)
+	{
+		m_Items[index] = value;
+	}
+};
 // System.Byte[]
 struct ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031  : public RuntimeArray
 {
@@ -2817,39 +3162,6 @@ struct StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248  : public RuntimeA
 	{
 		m_Items[index] = value;
 		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
-	}
-};
-// System.Int32[]
-struct Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C  : public RuntimeArray
-{
-	ALIGN_FIELD (8) int32_t m_Items[1];
-
-	inline int32_t GetAt(il2cpp_array_size_t index) const
-	{
-		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
-		return m_Items[index];
-	}
-	inline int32_t* GetAddressAt(il2cpp_array_size_t index)
-	{
-		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
-		return m_Items + index;
-	}
-	inline void SetAt(il2cpp_array_size_t index, int32_t value)
-	{
-		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
-		m_Items[index] = value;
-	}
-	inline int32_t GetAtUnchecked(il2cpp_array_size_t index) const
-	{
-		return m_Items[index];
-	}
-	inline int32_t* GetAddressAtUnchecked(il2cpp_array_size_t index)
-	{
-		return m_Items + index;
-	}
-	inline void SetAtUnchecked(il2cpp_array_size_t index, int32_t value)
-	{
-		m_Items[index] = value;
 	}
 };
 // System.Globalization.CalendarData[]
@@ -3062,10 +3374,104 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dictionary_2_set_Item_m1A840355E8EDAECEA
 // System.Boolean System.Collections.Generic.Dictionary`2<System.Object,System.Object>::TryGetValue(TKey,TValue&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Dictionary_2_TryGetValue_mD15380A4ED7CDEE99EA45881577D26BA9CE1B849_gshared (Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* __this, RuntimeObject* ___0_key, RuntimeObject** ___1_value, const RuntimeMethod* method) ;
 
-// System.Void System.DateTime::.ctor(System.Int32,System.Int32,System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DateTime__ctor_mA3BF7CE28807F0A02634FD43913FAAFD989CEE88 (DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D* __this, int32_t ___0_year, int32_t ___1_month, int32_t ___2_day, const RuntimeMethod* method) ;
+// System.Void System.Globalization.Calendar::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Calendar__ctor_mCA44DC39A700EAA06125E40215800356CDDFA65D (Calendar_t0A117CC7532A54C17188C2EFEA1F79DB20DF3A3B* __this, const RuntimeMethod* method) ;
+// System.Void System.Globalization.GregorianCalendarHelper::.ctor(System.Globalization.Calendar,System.Globalization.EraInfo[])
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GregorianCalendarHelper__ctor_m57E541DCBD6EE4B9307074469762D319972FEAA4 (GregorianCalendarHelper_tC77507376E36EEDABC1786237BADF1BF459F9723* __this, Calendar_t0A117CC7532A54C17188C2EFEA1F79DB20DF3A3B* ___0_cal, EraInfoU5BU5D_t3FC74518173AF52EC901FC118D4BD9A11DE89BAC* ___1_eraInfo, const RuntimeMethod* method) ;
+// System.Int32 System.Globalization.GregorianCalendarHelper::GetDaysInMonth(System.Int32,System.Int32,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t GregorianCalendarHelper_GetDaysInMonth_m0983BC282A81D958DC797FD3D528A0D1600150C2 (GregorianCalendarHelper_tC77507376E36EEDABC1786237BADF1BF459F9723* __this, int32_t ___0_year, int32_t ___1_month, int32_t ___2_era, const RuntimeMethod* method) ;
+// System.Int32 System.Globalization.GregorianCalendarHelper::GetDaysInYear(System.Int32,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t GregorianCalendarHelper_GetDaysInYear_mFF8A17212964E60FB7159BEC0D988122E5841A02 (GregorianCalendarHelper_tC77507376E36EEDABC1786237BADF1BF459F9723* __this, int32_t ___0_year, int32_t ___1_era, const RuntimeMethod* method) ;
+// System.Int32 System.Globalization.GregorianCalendarHelper::GetDayOfMonth(System.DateTime)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t GregorianCalendarHelper_GetDayOfMonth_m77C237DA0AAF014B72B7DC8A65250A09063421EA (GregorianCalendarHelper_tC77507376E36EEDABC1786237BADF1BF459F9723* __this, DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D ___0_time, const RuntimeMethod* method) ;
+// System.DayOfWeek System.Globalization.GregorianCalendarHelper::GetDayOfWeek(System.DateTime)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t GregorianCalendarHelper_GetDayOfWeek_m9E906D39201EF033460714BF4672F0DE127EBEFC (GregorianCalendarHelper_tC77507376E36EEDABC1786237BADF1BF459F9723* __this, DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D ___0_time, const RuntimeMethod* method) ;
+// System.Int32 System.Globalization.GregorianCalendarHelper::GetMonthsInYear(System.Int32,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t GregorianCalendarHelper_GetMonthsInYear_m770143A7917B0D7C1B6CF1AFBEFA4F2C75613EBB (GregorianCalendarHelper_tC77507376E36EEDABC1786237BADF1BF459F9723* __this, int32_t ___0_year, int32_t ___1_era, const RuntimeMethod* method) ;
+// System.Int32 System.Globalization.GregorianCalendarHelper::GetEra(System.DateTime)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t GregorianCalendarHelper_GetEra_mAD12F23218E3E32D48FC2A141976592C8F32E17A (GregorianCalendarHelper_tC77507376E36EEDABC1786237BADF1BF459F9723* __this, DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D ___0_time, const RuntimeMethod* method) ;
+// System.Int32 System.Globalization.GregorianCalendarHelper::GetMonth(System.DateTime)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t GregorianCalendarHelper_GetMonth_m330EBDC35C09A719CA8E4891FD869DBD665908D5 (GregorianCalendarHelper_tC77507376E36EEDABC1786237BADF1BF459F9723* __this, DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D ___0_time, const RuntimeMethod* method) ;
+// System.Int32 System.Globalization.GregorianCalendarHelper::GetYear(System.DateTime)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t GregorianCalendarHelper_GetYear_mC1A55DDEBB57DDED212A96198E6E6DE0D5640EFB (GregorianCalendarHelper_tC77507376E36EEDABC1786237BADF1BF459F9723* __this, DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D ___0_time, const RuntimeMethod* method) ;
+// System.Boolean System.Globalization.GregorianCalendarHelper::IsLeapYear(System.Int32,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool GregorianCalendarHelper_IsLeapYear_m87998D32AD91AC7CF1C2E3868F1EE5314A5C1B06 (GregorianCalendarHelper_tC77507376E36EEDABC1786237BADF1BF459F9723* __this, int32_t ___0_year, int32_t ___1_era, const RuntimeMethod* method) ;
+// System.DateTime System.Globalization.GregorianCalendarHelper::ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D GregorianCalendarHelper_ToDateTime_m80FBDC8C9F970378EACEA5465869D95324E356A9 (GregorianCalendarHelper_tC77507376E36EEDABC1786237BADF1BF459F9723* __this, int32_t ___0_year, int32_t ___1_month, int32_t ___2_day, int32_t ___3_hour, int32_t ___4_minute, int32_t ___5_second, int32_t ___6_millisecond, int32_t ___7_era, const RuntimeMethod* method) ;
+// System.Int32[] System.Globalization.GregorianCalendarHelper::get_Eras()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* GregorianCalendarHelper_get_Eras_mF1586F148A69818499B6C5DD0D226277A0CF410D (GregorianCalendarHelper_tC77507376E36EEDABC1786237BADF1BF459F9723* __this, const RuntimeMethod* method) ;
+// System.Int32 System.Globalization.Calendar::GetSystemTwoDigitYearSetting(System.Int32,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Calendar_GetSystemTwoDigitYearSetting_mBA56944261CA5924319D54AAC19347884DEDD640 (int32_t ___0_CalID, int32_t ___1_defaultYearValue, const RuntimeMethod* method) ;
+// System.Void System.Globalization.Calendar::VerifyWritable()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Calendar_VerifyWritable_mE43638F89F4F48297B873BCE30746F54D445B337 (Calendar_t0A117CC7532A54C17188C2EFEA1F79DB20DF3A3B* __this, const RuntimeMethod* method) ;
+// System.Int32 System.Globalization.GregorianCalendarHelper::get_MaxYear()
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t GregorianCalendarHelper_get_MaxYear_m8D9E6AA725B30F672528D32EC4F97E5D715346EA_inline (GregorianCalendarHelper_tC77507376E36EEDABC1786237BADF1BF459F9723* __this, const RuntimeMethod* method) ;
+// System.Globalization.CultureInfo System.Globalization.CultureInfo::get_CurrentCulture()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8FFA378E0* CultureInfo_get_CurrentCulture_m8A4580F49DDD7E9DB34C699965423DB8E3BBA9A5 (const RuntimeMethod* method) ;
+// System.String System.Environment::GetResourceString(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Environment_GetResourceString_mA14837A574D24E2F2D120D7B5514E849E9986058 (String_t* ___0_key, const RuntimeMethod* method) ;
+// System.String System.String::Format(System.IFormatProvider,System.String,System.Object,System.Object)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Format_m44BF8BF44DC9B67D6CF265A1A2703A6D743F5C56 (RuntimeObject* ___0_provider, String_t* ___1_format, RuntimeObject* ___2_arg0, RuntimeObject* ___3_arg1, const RuntimeMethod* method) ;
+// System.Void System.ArgumentOutOfRangeException::.ctor(System.String,System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ArgumentOutOfRangeException__ctor_mE5B2755F0BEA043CACF915D5CE140859EE58FA66 (ArgumentOutOfRangeException_tEA2822DAF62B10EEED00E0E3A341D4BAF78CF85F* __this, String_t* ___0_paramName, String_t* ___1_message, const RuntimeMethod* method) ;
+// System.Int32 System.Globalization.GregorianCalendarHelper::ToFourDigitYear(System.Int32,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t GregorianCalendarHelper_ToFourDigitYear_m4E5C6CAD9E549AA1919514CC019D223036110B78 (GregorianCalendarHelper_tC77507376E36EEDABC1786237BADF1BF459F9723* __this, int32_t ___0_year, int32_t ___1_twoDigitYearMax, const RuntimeMethod* method) ;
+// System.Void System.Globalization.EraInfo::.ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EraInfo__ctor_m5E2876C2D2125D19B666495A090E3ECF2B5F80C9 (EraInfo_t93ABF7759E8286C5F600445DF5B6C72AAB351921* __this, int32_t ___0_era, int32_t ___1_startYear, int32_t ___2_startMonth, int32_t ___3_startDay, int32_t ___4_yearOffset, int32_t ___5_minEraYear, int32_t ___6_maxEraYear, const RuntimeMethod* method) ;
+// System.Void System.Runtime.CompilerServices.RuntimeHelpers::InitializeArray(System.Array,System.RuntimeFieldHandle)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RuntimeHelpers_InitializeArray_m751372AA3F24FBF6DA9B9D687CBFA2DE436CAB9B (RuntimeArray* ___0_array, RuntimeFieldHandle_t6E4C45B6D2EA12FC99185805A7E77527899B25C5 ___1_fldHandle, const RuntimeMethod* method) ;
 // System.Void System.Globalization.UmAlQuraCalendar/DateMapping::.ctor(System.Int32,System.Int32,System.Int32,System.Int32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DateMapping__ctor_m6861844EAE45E8AD7B3289F9C6C487146D6F7A6E (DateMapping_tD71D0AF5C7C6CB4F9517C292B1B61D7AF7CFCCFD* __this, int32_t ___0_MonthsLengthFlags, int32_t ___1_GYear, int32_t ___2_GMonth, int32_t ___3_GDay, const RuntimeMethod* method) ;
+// System.DateTime System.DateTime::AddDays(System.Double)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D DateTime_AddDays_m9DC06105845A82FEAF697D5E30308ABD49E5721B (DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D* __this, double ___0_value, const RuntimeMethod* method) ;
+// System.Int32 System.DateTime::get_Year()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t DateTime_get_Year_m00A88C4CEE07B7906F5F7F75C254B769808F5138 (DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D* __this, const RuntimeMethod* method) ;
+// System.Int32 System.DateTime::get_Month()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t DateTime_get_Month_m899C6602DE8198990B2CAF5EBC04CC67764E3DA2 (DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D* __this, const RuntimeMethod* method) ;
+// System.Int32 System.DateTime::get_Day()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t DateTime_get_Day_m872DBCA4C79955EC1E27EB68746B6C2F6A183B28 (DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D* __this, const RuntimeMethod* method) ;
+// System.Void System.Globalization.UmAlQuraCalendar::ConvertHijriToGregorian(System.Int32,System.Int32,System.Int32,System.Int32&,System.Int32&,System.Int32&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UmAlQuraCalendar_ConvertHijriToGregorian_mE45B2D9E097D18D797F6EE6CCBA23BD95FAEEEC2 (int32_t ___0_HijriYear, int32_t ___1_HijriMonth, int32_t ___2_HijriDay, int32_t* ___3_yg, int32_t* ___4_mg, int32_t* ___5_dg, const RuntimeMethod* method) ;
+// System.Int64 System.Globalization.GregorianCalendar::GetAbsoluteDate(System.Int32,System.Int32,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int64_t GregorianCalendar_GetAbsoluteDate_m439E3A280382F2BC01623E9426FD5FA25DBE642A (int32_t ___0_year, int32_t ___1_month, int32_t ___2_day, const RuntimeMethod* method) ;
+// System.Int64 System.DateTime::get_Ticks()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int64_t DateTime_get_Ticks_mC2CF04ED0EAB425C72C2532FFC5743777F3C93A6 (DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D* __this, const RuntimeMethod* method) ;
+// System.Globalization.CultureInfo System.Globalization.CultureInfo::get_InvariantCulture()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8FFA378E0* CultureInfo_get_InvariantCulture_mD1E96DC845E34B10F78CB744B0CB5D7D63CEB1E6 (const RuntimeMethod* method) ;
+// System.Void System.Globalization.UmAlQuraCalendar::CheckEraRange(System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UmAlQuraCalendar_CheckEraRange_mDE9AA06043506EEA0A0928177B8ECFFD17C2D5E6 (int32_t ___0_era, const RuntimeMethod* method) ;
+// System.Void System.Globalization.UmAlQuraCalendar::CheckYearRange(System.Int32,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UmAlQuraCalendar_CheckYearRange_mCEA99910DFF1659B5DD45B3C9A4502936A656E02 (int32_t ___0_year, int32_t ___1_era, const RuntimeMethod* method) ;
+// System.Int32 System.DateTime::CompareTo(System.DateTime)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t DateTime_CompareTo_m4A3000CD4FF15EA7CA2E9C5C95A9D07F3AA8D35D (DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D* __this, DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D ___0_value, const RuntimeMethod* method) ;
+// System.TimeSpan System.DateTime::Subtract(System.DateTime)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A DateTime_Subtract_m4064A98F489219E9C414DF5C03EE041351B4502A (DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D* __this, DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D ___0_value, const RuntimeMethod* method) ;
+// System.Double System.TimeSpan::get_TotalDays()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR double TimeSpan_get_TotalDays_m7B3557D0DD79E39DFC6C08BAC756B1B5DE2D4108 (TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A* __this, const RuntimeMethod* method) ;
+// System.Void System.Globalization.UmAlQuraCalendar::CheckTicksRange(System.Int64)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UmAlQuraCalendar_CheckTicksRange_mBA2959172A68F005AA5CA882A79BC94E6CB9E58B (int64_t ___0_ticks, const RuntimeMethod* method) ;
+// System.Void System.Globalization.UmAlQuraCalendar::ConvertGregorianToHijri(System.DateTime,System.Int32&,System.Int32&,System.Int32&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UmAlQuraCalendar_ConvertGregorianToHijri_m26832DA219E1250C7003B72C0F213301DDEC31A6 (DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D ___0_time, int32_t* ___1_HijriYear, int32_t* ___2_HijriMonth, int32_t* ___3_HijriDay, const RuntimeMethod* method) ;
+// System.Int64 System.Globalization.UmAlQuraCalendar::GetAbsoluteDateUmAlQura(System.Int32,System.Int32,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int64_t UmAlQuraCalendar_GetAbsoluteDateUmAlQura_mEB0C87D2A6A2BB4B0A4DBF07E40B22686AC9E179 (int32_t ___0_year, int32_t ___1_month, int32_t ___2_day, const RuntimeMethod* method) ;
+// System.Void System.InvalidOperationException::.ctor(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InvalidOperationException__ctor_mE4CB6F4712AB6D99A2358FBAE2E052B3EE976162 (InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB* __this, String_t* ___0_message, const RuntimeMethod* method) ;
+// System.Void System.Globalization.UmAlQuraCalendar::CheckYearMonthRange(System.Int32,System.Int32,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UmAlQuraCalendar_CheckYearMonthRange_mD7B80AB6ADA0B466AEED666697FD1CBBF85136B8 (int32_t ___0_year, int32_t ___1_month, int32_t ___2_era, const RuntimeMethod* method) ;
+// System.Int32 System.Globalization.UmAlQuraCalendar::RealGetDaysInYear(System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t UmAlQuraCalendar_RealGetDaysInYear_mA3740641CD7F52F6DAF785DC8B461B12782426F0 (int32_t ___0_year, const RuntimeMethod* method) ;
+// System.Int64 System.Globalization.Calendar::TimeToTicks(System.Int32,System.Int32,System.Int32,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int64_t Calendar_TimeToTicks_m93A6006E50E39BF9F143F25B2D078CD1639E72DB (int32_t ___0_hour, int32_t ___1_minute, int32_t ___2_second, int32_t ___3_millisecond, const RuntimeMethod* method) ;
+// System.Void System.DateTime::.ctor(System.Int64)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DateTime__ctor_m64AFCE84ABB24698256EB9F635EFD0A221823441 (DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D* __this, int64_t ___0_ticks, const RuntimeMethod* method) ;
+// System.Int32 System.Globalization.Calendar::ToFourDigitYear(System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Calendar_ToFourDigitYear_m19E0969391053AEC74874CB0FC41F59868E83DC5 (Calendar_t0A117CC7532A54C17188C2EFEA1F79DB20DF3A3B* __this, int32_t ___0_year, const RuntimeMethod* method) ;
+// System.Globalization.UmAlQuraCalendar/DateMapping[] System.Globalization.UmAlQuraCalendar::InitDateMapping()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DateMappingU5BU5D_tAE26CCACFFC820ECD4675D0D35E04EF7D2A7BA0A* UmAlQuraCalendar_InitDateMapping_mB6C5F95BFC613BE36E279C4339703FE29D06271F (const RuntimeMethod* method) ;
+// System.Void System.DateTime::.ctor(System.Int32,System.Int32,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DateTime__ctor_mA3BF7CE28807F0A02634FD43913FAAFD989CEE88 (DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D* __this, int32_t ___0_year, int32_t ___1_month, int32_t ___2_day, const RuntimeMethod* method) ;
+// System.Void System.DateTime::.ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DateTime__ctor_mA66CE5141E86C5BC75F79543F99A7BD77B420201 (DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D* __this, int32_t ___0_year, int32_t ___1_month, int32_t ___2_day, int32_t ___3_hour, int32_t ___4_minute, int32_t ___5_second, int32_t ___6_millisecond, const RuntimeMethod* method) ;
 // System.Void System.ArgumentNullException::.ctor(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* __this, String_t* ___0_paramName, const RuntimeMethod* method) ;
 // System.Void System.Object::.ctor()
@@ -3156,10 +3562,6 @@ inline void Dictionary_2__ctor_mB8B5CB80154290CA11D9F5DAD373E5265F9A0399 (Dictio
 }
 // System.Int32 System.String::Compare(System.String,System.String,System.StringComparison)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t String_Compare_mB21E4512DAFACE027D2DD3FE75DD6E69CE315009 (String_t* ___0_strA, String_t* ___1_strB, int32_t ___2_comparisonType, const RuntimeMethod* method) ;
-// System.Globalization.CultureInfo System.Globalization.CultureInfo::get_CurrentCulture()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8FFA378E0* CultureInfo_get_CurrentCulture_m8A4580F49DDD7E9DB34C699965423DB8E3BBA9A5 (const RuntimeMethod* method) ;
-// System.String System.Environment::GetResourceString(System.String)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Environment_GetResourceString_mA14837A574D24E2F2D120D7B5514E849E9986058 (String_t* ___0_key, const RuntimeMethod* method) ;
 // System.String System.String::Format(System.IFormatProvider,System.String,System.Object)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Format_m3844098E7C18576D263AAF62F69BE5C70BF9A744 (RuntimeObject* ___0_provider, String_t* ___1_format, RuntimeObject* ___2_arg0, const RuntimeMethod* method) ;
 // System.Void System.ArgumentException::.ctor(System.String,System.String)
@@ -3192,8 +3594,6 @@ inline void Dictionary_2_set_Item_m4517B064A445BEED51581EB1C89BF464E8F01F6D (Dic
 {
 	((  void (*) (Dictionary_2_t4A66E55DEE67263E1D7B09B4693FD0F41C204B21*, int32_t, CodePageDataItem_t52460FA30AE37F4F26ACB81055E58002262F19F2*, const RuntimeMethod*))Dictionary_2_set_Item_m2888D71A14F2B8510102F24FEE90552E91B124C1_gshared)(__this, ___0_key, ___1_value, method);
 }
-// System.Void System.Runtime.CompilerServices.RuntimeHelpers::InitializeArray(System.Array,System.RuntimeFieldHandle)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RuntimeHelpers_InitializeArray_m751372AA3F24FBF6DA9B9D687CBFA2DE436CAB9B (RuntimeArray* ___0_array, RuntimeFieldHandle_t6E4C45B6D2EA12FC99185805A7E77527899B25C5 ___1_fldHandle, const RuntimeMethod* method) ;
 // System.Void System.Globalization.CultureInfo::OnCultureInfoChangedInAppX(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CultureInfo_OnCultureInfoChangedInAppX_m407BCFC1029A4485B7B063BC2F3601968C3BE577 (String_t* ___0_language, const RuntimeMethod* method) ;
 // System.Threading.Thread System.Threading.Thread::get_CurrentThread()
@@ -3204,8 +3604,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8FFA378E0* Thread_get_CurrentUICulture_mE5B78C16453B4705AFF8E4566F9AE1C4DE8B6BAA (Thread_t0A773B9DE873D2DCAA7D229EAB36757B500E207F* __this, const RuntimeMethod* method) ;
 // System.Boolean System.Globalization.GlobalizationMode::get_Invariant()
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool GlobalizationMode_get_Invariant_m07C027203B17E9B629D292376366608B7DDB2903_inline (const RuntimeMethod* method) ;
-// System.Globalization.CultureInfo System.Globalization.CultureInfo::get_InvariantCulture()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8FFA378E0* CultureInfo_get_InvariantCulture_mD1E96DC845E34B10F78CB744B0CB5D7D63CEB1E6 (const RuntimeMethod* method) ;
 // System.String System.Globalization.CultureInfo::get_current_locale_name()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* CultureInfo_get_current_locale_name_m7A78FD4717EDB2DBF545C787677B5675B2767C8D (const RuntimeMethod* method) ;
 // System.Globalization.CultureInfo System.Globalization.CultureInfo::CreateSpecificCulture(System.String)
@@ -3234,8 +3632,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Int32_GetHashCode_m253D60FF7527A483E9
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CompareInfo__ctor_m9FEA771F33E566572282454CD13694E654DBF417 (CompareInfo_t1B1A6AC3486B570C76ABA52149C9BD4CD82F9E57* __this, CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8FFA378E0* ___0_culture, const RuntimeMethod* method) ;
 // System.Void System.Globalization.NumberFormatInfo::.ctor(System.Globalization.CultureData)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberFormatInfo__ctor_mC15797C73621B9010D82044D547231E6C166FB83 (NumberFormatInfo_t8E26808B202927FEBF9064FCFEEA4D6E076E6472* __this, CultureData_tEEFDCF4ECA1BBF6C0C8C94EB3541657245598F9D* ___0_cultureData, const RuntimeMethod* method) ;
-// System.Void System.InvalidOperationException::.ctor(System.String)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InvalidOperationException__ctor_mE4CB6F4712AB6D99A2358FBAE2E052B3EE976162 (InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB* __this, String_t* ___0_message, const RuntimeMethod* method) ;
 // System.Void System.Globalization.CultureInfo::CheckNeutral()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CultureInfo_CheckNeutral_m4E7FFDC0DD344929D58E51F7F83CCE77E9218281 (CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8FFA378E0* __this, const RuntimeMethod* method) ;
 // System.Void System.Globalization.DateTimeFormatInfo::.ctor()
@@ -3262,16 +3658,12 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void TextInfo_SetReadOnlyState_m9
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CultureInfo__ctor_mA8F33A9567D0759123DDFB1FD21AF60C7E617336 (CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8FFA378E0* __this, int32_t ___0_culture, bool ___1_useUserOverride, const RuntimeMethod* method) ;
 // System.Void System.Globalization.CultureInfo::.ctor(System.Int32,System.Boolean,System.Boolean)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CultureInfo__ctor_mB7D1A620E997AA811D44C475FE46AEFB6CBE0FBE (CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8FFA378E0* __this, int32_t ___0_culture, bool ___1_useUserOverride, bool ___2_read_only, const RuntimeMethod* method) ;
-// System.Void System.ArgumentOutOfRangeException::.ctor(System.String,System.String)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ArgumentOutOfRangeException__ctor_mE5B2755F0BEA043CACF915D5CE140859EE58FA66 (ArgumentOutOfRangeException_tEA2822DAF62B10EEED00E0E3A341D4BAF78CF85F* __this, String_t* ___0_paramName, String_t* ___1_message, const RuntimeMethod* method) ;
 // System.Void System.Globalization.CultureInfo::ConstructInvariant(System.Boolean)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CultureInfo_ConstructInvariant_m905A2E2617425B5B33C8FCBC7360AA21C4CAE679 (CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8FFA378E0* __this, bool ___0_read_only, const RuntimeMethod* method) ;
 // System.String System.Int32::ToString(System.IFormatProvider)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Int32_ToString_m3B2730D9F5B0C1C57DCCC8B8DCFB8E5EC4E8979B (int32_t* __this, RuntimeObject* ___0_provider, const RuntimeMethod* method) ;
 // System.String System.Int32::ToString(System.String,System.IFormatProvider)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Int32_ToString_mE871810BC163EE4EF88E7C7682A6AD39911173B8 (int32_t* __this, String_t* ___0_format, RuntimeObject* ___1_provider, const RuntimeMethod* method) ;
-// System.String System.String::Format(System.IFormatProvider,System.String,System.Object,System.Object)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Format_m44BF8BF44DC9B67D6CF265A1A2703A6D743F5C56 (RuntimeObject* ___0_provider, String_t* ___1_format, RuntimeObject* ___2_arg0, RuntimeObject* ___3_arg1, const RuntimeMethod* method) ;
 // System.Void System.Globalization.CultureNotFoundException::.ctor(System.String,System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CultureNotFoundException__ctor_m191FF5BE9F1ABB67D8EAE5B2A0C43200C8BB0BA0 (CultureNotFoundException_t8088EAAA2DB1C1D01F4B6C3254D191A483A7EE0F* __this, String_t* ___0_paramName, String_t* ___1_message, const RuntimeMethod* method) ;
 // System.Globalization.CultureInfo/Data System.Globalization.CultureInfo::GetTextInfoData()
@@ -3353,6 +3745,1516 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OnCultureInfoChangedDelegate__ctor_mDDDB
 // System.Void System.Globalization.CultureInfo::InitializeUserPreferredCultureInfoInAppX(System.Globalization.CultureInfo/OnCultureInfoChangedDelegate)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CultureInfo_InitializeUserPreferredCultureInfoInAppX_mF46E2E8D4D880F8BEE0F3F77F43F57F4624B6263 (OnCultureInfoChangedDelegate_t643F89A369BE552AC4D546507F51BF998EBA670A* ___0_onCultureInfoChangedInAppX, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C void DEFAULT_CALL InitializeUserPreferredCultureInfoInAppX(Il2CppMethodPointer);
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.DateTime System.Globalization.ThaiBuddhistCalendar::get_MinSupportedDateTime()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D ThaiBuddhistCalendar_get_MinSupportedDateTime_m75B0690FCC47984BBF16D6C8187A5C224FC6AF37 (ThaiBuddhistCalendar_t0A8D34CFB2617DDFE81F878C8E404971CFA70715* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		il2cpp_codegen_runtime_class_init_inline(DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D_il2cpp_TypeInfo_var);
+		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_0 = ((DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D_StaticFields*)il2cpp_codegen_static_fields_for(DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D_il2cpp_TypeInfo_var))->___MinValue_32;
+		return L_0;
+	}
+}
+// System.DateTime System.Globalization.ThaiBuddhistCalendar::get_MaxSupportedDateTime()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D ThaiBuddhistCalendar_get_MaxSupportedDateTime_m95A221E14FF8B32C255ADD8592C8BB364DB1839A (ThaiBuddhistCalendar_t0A8D34CFB2617DDFE81F878C8E404971CFA70715* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		il2cpp_codegen_runtime_class_init_inline(DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D_il2cpp_TypeInfo_var);
+		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_0 = ((DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D_StaticFields*)il2cpp_codegen_static_fields_for(DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D_il2cpp_TypeInfo_var))->___MaxValue_33;
+		return L_0;
+	}
+}
+// System.Void System.Globalization.ThaiBuddhistCalendar::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ThaiBuddhistCalendar__ctor_m7E054F07445E1BDEAEED55BE3C79BA2C59A2A704 (ThaiBuddhistCalendar_t0A8D34CFB2617DDFE81F878C8E404971CFA70715* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GregorianCalendarHelper_tC77507376E36EEDABC1786237BADF1BF459F9723_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ThaiBuddhistCalendar_t0A8D34CFB2617DDFE81F878C8E404971CFA70715_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		Calendar__ctor_mCA44DC39A700EAA06125E40215800356CDDFA65D(__this, NULL);
+		il2cpp_codegen_runtime_class_init_inline(ThaiBuddhistCalendar_t0A8D34CFB2617DDFE81F878C8E404971CFA70715_il2cpp_TypeInfo_var);
+		EraInfoU5BU5D_t3FC74518173AF52EC901FC118D4BD9A11DE89BAC* L_0 = ((ThaiBuddhistCalendar_t0A8D34CFB2617DDFE81F878C8E404971CFA70715_StaticFields*)il2cpp_codegen_static_fields_for(ThaiBuddhistCalendar_t0A8D34CFB2617DDFE81F878C8E404971CFA70715_il2cpp_TypeInfo_var))->___thaiBuddhistEraInfo_42;
+		GregorianCalendarHelper_tC77507376E36EEDABC1786237BADF1BF459F9723* L_1 = (GregorianCalendarHelper_tC77507376E36EEDABC1786237BADF1BF459F9723*)il2cpp_codegen_object_new(GregorianCalendarHelper_tC77507376E36EEDABC1786237BADF1BF459F9723_il2cpp_TypeInfo_var);
+		NullCheck(L_1);
+		GregorianCalendarHelper__ctor_m57E541DCBD6EE4B9307074469762D319972FEAA4(L_1, __this, L_0, NULL);
+		__this->___helper_43 = L_1;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___helper_43), (void*)L_1);
+		return;
+	}
+}
+// System.Int32 System.Globalization.ThaiBuddhistCalendar::get_ID()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ThaiBuddhistCalendar_get_ID_mDC0DA37BABE911F3ACD05B0A432DFCF1299ED795 (ThaiBuddhistCalendar_t0A8D34CFB2617DDFE81F878C8E404971CFA70715* __this, const RuntimeMethod* method) 
+{
+	{
+		return 7;
+	}
+}
+// System.Int32 System.Globalization.ThaiBuddhistCalendar::GetDaysInMonth(System.Int32,System.Int32,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ThaiBuddhistCalendar_GetDaysInMonth_m261F1905C634796C325205C00B6A4DA22C4FEC83 (ThaiBuddhistCalendar_t0A8D34CFB2617DDFE81F878C8E404971CFA70715* __this, int32_t ___0_year, int32_t ___1_month, int32_t ___2_era, const RuntimeMethod* method) 
+{
+	{
+		GregorianCalendarHelper_tC77507376E36EEDABC1786237BADF1BF459F9723* L_0 = __this->___helper_43;
+		int32_t L_1 = ___0_year;
+		int32_t L_2 = ___1_month;
+		int32_t L_3 = ___2_era;
+		NullCheck(L_0);
+		int32_t L_4;
+		L_4 = GregorianCalendarHelper_GetDaysInMonth_m0983BC282A81D958DC797FD3D528A0D1600150C2(L_0, L_1, L_2, L_3, NULL);
+		return L_4;
+	}
+}
+// System.Int32 System.Globalization.ThaiBuddhistCalendar::GetDaysInYear(System.Int32,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ThaiBuddhistCalendar_GetDaysInYear_m24C6640052A67D0688D1F18073AFCCC15F0AE8A2 (ThaiBuddhistCalendar_t0A8D34CFB2617DDFE81F878C8E404971CFA70715* __this, int32_t ___0_year, int32_t ___1_era, const RuntimeMethod* method) 
+{
+	{
+		GregorianCalendarHelper_tC77507376E36EEDABC1786237BADF1BF459F9723* L_0 = __this->___helper_43;
+		int32_t L_1 = ___0_year;
+		int32_t L_2 = ___1_era;
+		NullCheck(L_0);
+		int32_t L_3;
+		L_3 = GregorianCalendarHelper_GetDaysInYear_mFF8A17212964E60FB7159BEC0D988122E5841A02(L_0, L_1, L_2, NULL);
+		return L_3;
+	}
+}
+// System.Int32 System.Globalization.ThaiBuddhistCalendar::GetDayOfMonth(System.DateTime)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ThaiBuddhistCalendar_GetDayOfMonth_m8DF60E4BB5061242EDDE6B86D77F254FC2500806 (ThaiBuddhistCalendar_t0A8D34CFB2617DDFE81F878C8E404971CFA70715* __this, DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D ___0_time, const RuntimeMethod* method) 
+{
+	{
+		GregorianCalendarHelper_tC77507376E36EEDABC1786237BADF1BF459F9723* L_0 = __this->___helper_43;
+		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_1 = ___0_time;
+		NullCheck(L_0);
+		int32_t L_2;
+		L_2 = GregorianCalendarHelper_GetDayOfMonth_m77C237DA0AAF014B72B7DC8A65250A09063421EA(L_0, L_1, NULL);
+		return L_2;
+	}
+}
+// System.DayOfWeek System.Globalization.ThaiBuddhistCalendar::GetDayOfWeek(System.DateTime)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ThaiBuddhistCalendar_GetDayOfWeek_mC8C06CAF95D10070296A1865A8496CA25D26C7FA (ThaiBuddhistCalendar_t0A8D34CFB2617DDFE81F878C8E404971CFA70715* __this, DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D ___0_time, const RuntimeMethod* method) 
+{
+	{
+		GregorianCalendarHelper_tC77507376E36EEDABC1786237BADF1BF459F9723* L_0 = __this->___helper_43;
+		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_1 = ___0_time;
+		NullCheck(L_0);
+		int32_t L_2;
+		L_2 = GregorianCalendarHelper_GetDayOfWeek_m9E906D39201EF033460714BF4672F0DE127EBEFC(L_0, L_1, NULL);
+		return L_2;
+	}
+}
+// System.Int32 System.Globalization.ThaiBuddhistCalendar::GetMonthsInYear(System.Int32,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ThaiBuddhistCalendar_GetMonthsInYear_m55A3E0F69E6BAF257AA23D4294CA685E47C50407 (ThaiBuddhistCalendar_t0A8D34CFB2617DDFE81F878C8E404971CFA70715* __this, int32_t ___0_year, int32_t ___1_era, const RuntimeMethod* method) 
+{
+	{
+		GregorianCalendarHelper_tC77507376E36EEDABC1786237BADF1BF459F9723* L_0 = __this->___helper_43;
+		int32_t L_1 = ___0_year;
+		int32_t L_2 = ___1_era;
+		NullCheck(L_0);
+		int32_t L_3;
+		L_3 = GregorianCalendarHelper_GetMonthsInYear_m770143A7917B0D7C1B6CF1AFBEFA4F2C75613EBB(L_0, L_1, L_2, NULL);
+		return L_3;
+	}
+}
+// System.Int32 System.Globalization.ThaiBuddhistCalendar::GetEra(System.DateTime)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ThaiBuddhistCalendar_GetEra_m5DBC0129A1DDD1CB0154C712B99DE7A845CABC86 (ThaiBuddhistCalendar_t0A8D34CFB2617DDFE81F878C8E404971CFA70715* __this, DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D ___0_time, const RuntimeMethod* method) 
+{
+	{
+		GregorianCalendarHelper_tC77507376E36EEDABC1786237BADF1BF459F9723* L_0 = __this->___helper_43;
+		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_1 = ___0_time;
+		NullCheck(L_0);
+		int32_t L_2;
+		L_2 = GregorianCalendarHelper_GetEra_mAD12F23218E3E32D48FC2A141976592C8F32E17A(L_0, L_1, NULL);
+		return L_2;
+	}
+}
+// System.Int32 System.Globalization.ThaiBuddhistCalendar::GetMonth(System.DateTime)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ThaiBuddhistCalendar_GetMonth_mE5E1E4E58DCE6A8EF311E50470ACA3684ED47F5B (ThaiBuddhistCalendar_t0A8D34CFB2617DDFE81F878C8E404971CFA70715* __this, DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D ___0_time, const RuntimeMethod* method) 
+{
+	{
+		GregorianCalendarHelper_tC77507376E36EEDABC1786237BADF1BF459F9723* L_0 = __this->___helper_43;
+		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_1 = ___0_time;
+		NullCheck(L_0);
+		int32_t L_2;
+		L_2 = GregorianCalendarHelper_GetMonth_m330EBDC35C09A719CA8E4891FD869DBD665908D5(L_0, L_1, NULL);
+		return L_2;
+	}
+}
+// System.Int32 System.Globalization.ThaiBuddhistCalendar::GetYear(System.DateTime)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ThaiBuddhistCalendar_GetYear_mA972D20C883D6DB92D06322D8229B077040C6E08 (ThaiBuddhistCalendar_t0A8D34CFB2617DDFE81F878C8E404971CFA70715* __this, DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D ___0_time, const RuntimeMethod* method) 
+{
+	{
+		GregorianCalendarHelper_tC77507376E36EEDABC1786237BADF1BF459F9723* L_0 = __this->___helper_43;
+		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_1 = ___0_time;
+		NullCheck(L_0);
+		int32_t L_2;
+		L_2 = GregorianCalendarHelper_GetYear_mC1A55DDEBB57DDED212A96198E6E6DE0D5640EFB(L_0, L_1, NULL);
+		return L_2;
+	}
+}
+// System.Boolean System.Globalization.ThaiBuddhistCalendar::IsLeapYear(System.Int32,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ThaiBuddhistCalendar_IsLeapYear_mC606265E14A9330A26BA863C56B2478B7AC6F84F (ThaiBuddhistCalendar_t0A8D34CFB2617DDFE81F878C8E404971CFA70715* __this, int32_t ___0_year, int32_t ___1_era, const RuntimeMethod* method) 
+{
+	{
+		GregorianCalendarHelper_tC77507376E36EEDABC1786237BADF1BF459F9723* L_0 = __this->___helper_43;
+		int32_t L_1 = ___0_year;
+		int32_t L_2 = ___1_era;
+		NullCheck(L_0);
+		bool L_3;
+		L_3 = GregorianCalendarHelper_IsLeapYear_m87998D32AD91AC7CF1C2E3868F1EE5314A5C1B06(L_0, L_1, L_2, NULL);
+		return L_3;
+	}
+}
+// System.DateTime System.Globalization.ThaiBuddhistCalendar::ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D ThaiBuddhistCalendar_ToDateTime_mCB2DA1394D9E643ED18F32A6BE29BA7F7EE3554A (ThaiBuddhistCalendar_t0A8D34CFB2617DDFE81F878C8E404971CFA70715* __this, int32_t ___0_year, int32_t ___1_month, int32_t ___2_day, int32_t ___3_hour, int32_t ___4_minute, int32_t ___5_second, int32_t ___6_millisecond, int32_t ___7_era, const RuntimeMethod* method) 
+{
+	{
+		GregorianCalendarHelper_tC77507376E36EEDABC1786237BADF1BF459F9723* L_0 = __this->___helper_43;
+		int32_t L_1 = ___0_year;
+		int32_t L_2 = ___1_month;
+		int32_t L_3 = ___2_day;
+		int32_t L_4 = ___3_hour;
+		int32_t L_5 = ___4_minute;
+		int32_t L_6 = ___5_second;
+		int32_t L_7 = ___6_millisecond;
+		int32_t L_8 = ___7_era;
+		NullCheck(L_0);
+		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_9;
+		L_9 = GregorianCalendarHelper_ToDateTime_m80FBDC8C9F970378EACEA5465869D95324E356A9(L_0, L_1, L_2, L_3, L_4, L_5, L_6, L_7, L_8, NULL);
+		return L_9;
+	}
+}
+// System.Int32[] System.Globalization.ThaiBuddhistCalendar::get_Eras()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ThaiBuddhistCalendar_get_Eras_mA276B1B40D46993B452C27282359777DEF5E8FA6 (ThaiBuddhistCalendar_t0A8D34CFB2617DDFE81F878C8E404971CFA70715* __this, const RuntimeMethod* method) 
+{
+	{
+		GregorianCalendarHelper_tC77507376E36EEDABC1786237BADF1BF459F9723* L_0 = __this->___helper_43;
+		NullCheck(L_0);
+		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_1;
+		L_1 = GregorianCalendarHelper_get_Eras_mF1586F148A69818499B6C5DD0D226277A0CF410D(L_0, NULL);
+		return L_1;
+	}
+}
+// System.Int32 System.Globalization.ThaiBuddhistCalendar::get_TwoDigitYearMax()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ThaiBuddhistCalendar_get_TwoDigitYearMax_m69074AF45195B730D4FD050966B19A4D3A85CE72 (ThaiBuddhistCalendar_t0A8D34CFB2617DDFE81F878C8E404971CFA70715* __this, const RuntimeMethod* method) 
+{
+	{
+		int32_t L_0 = ((Calendar_t0A117CC7532A54C17188C2EFEA1F79DB20DF3A3B*)__this)->___twoDigitYearMax_41;
+		if ((!(((uint32_t)L_0) == ((uint32_t)(-1)))))
+		{
+			goto IL_001f;
+		}
+	}
+	{
+		int32_t L_1;
+		L_1 = VirtualFuncInvoker0< int32_t >::Invoke(7 /* System.Int32 System.Globalization.Calendar::get_ID() */, __this);
+		int32_t L_2;
+		L_2 = Calendar_GetSystemTwoDigitYearSetting_mBA56944261CA5924319D54AAC19347884DEDD640(L_1, ((int32_t)2572), NULL);
+		((Calendar_t0A117CC7532A54C17188C2EFEA1F79DB20DF3A3B*)__this)->___twoDigitYearMax_41 = L_2;
+	}
+
+IL_001f:
+	{
+		int32_t L_3 = ((Calendar_t0A117CC7532A54C17188C2EFEA1F79DB20DF3A3B*)__this)->___twoDigitYearMax_41;
+		return L_3;
+	}
+}
+// System.Void System.Globalization.ThaiBuddhistCalendar::set_TwoDigitYearMax(System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ThaiBuddhistCalendar_set_TwoDigitYearMax_m8927EC2BCFC2AE7A00F2DF00352DF6C194BEE356 (ThaiBuddhistCalendar_t0A8D34CFB2617DDFE81F878C8E404971CFA70715* __this, int32_t ___0_value, const RuntimeMethod* method) 
+{
+	{
+		Calendar_VerifyWritable_mE43638F89F4F48297B873BCE30746F54D445B337(__this, NULL);
+		int32_t L_0 = ___0_value;
+		if ((((int32_t)L_0) < ((int32_t)((int32_t)99))))
+		{
+			goto IL_0019;
+		}
+	}
+	{
+		int32_t L_1 = ___0_value;
+		GregorianCalendarHelper_tC77507376E36EEDABC1786237BADF1BF459F9723* L_2 = __this->___helper_43;
+		NullCheck(L_2);
+		int32_t L_3;
+		L_3 = GregorianCalendarHelper_get_MaxYear_m8D9E6AA725B30F672528D32EC4F97E5D715346EA_inline(L_2, NULL);
+		if ((((int32_t)L_1) <= ((int32_t)L_3)))
+		{
+			goto IL_004f;
+		}
+	}
+
+IL_0019:
+	{
+		il2cpp_codegen_runtime_class_init_inline(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8FFA378E0_il2cpp_TypeInfo_var)));
+		CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8FFA378E0* L_4;
+		L_4 = CultureInfo_get_CurrentCulture_m8A4580F49DDD7E9DB34C699965423DB8E3BBA9A5(NULL);
+		String_t* L_5;
+		L_5 = Environment_GetResourceString_mA14837A574D24E2F2D120D7B5514E849E9986058(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralCB6B67D4653121AE0F63EE256975A0DBD0FAF6B1)), NULL);
+		int32_t L_6 = ((int32_t)99);
+		RuntimeObject* L_7 = Box(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var)), &L_6);
+		GregorianCalendarHelper_tC77507376E36EEDABC1786237BADF1BF459F9723* L_8 = __this->___helper_43;
+		NullCheck(L_8);
+		int32_t L_9;
+		L_9 = GregorianCalendarHelper_get_MaxYear_m8D9E6AA725B30F672528D32EC4F97E5D715346EA_inline(L_8, NULL);
+		int32_t L_10 = L_9;
+		RuntimeObject* L_11 = Box(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var)), &L_10);
+		String_t* L_12;
+		L_12 = String_Format_m44BF8BF44DC9B67D6CF265A1A2703A6D743F5C56(L_4, L_5, L_7, L_11, NULL);
+		ArgumentOutOfRangeException_tEA2822DAF62B10EEED00E0E3A341D4BAF78CF85F* L_13 = (ArgumentOutOfRangeException_tEA2822DAF62B10EEED00E0E3A341D4BAF78CF85F*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentOutOfRangeException_tEA2822DAF62B10EEED00E0E3A341D4BAF78CF85F_il2cpp_TypeInfo_var)));
+		NullCheck(L_13);
+		ArgumentOutOfRangeException__ctor_mE5B2755F0BEA043CACF915D5CE140859EE58FA66(L_13, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral1DEDCD1168FE0A01C595FF5B7901D1C14F15F786)), L_12, NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_13, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ThaiBuddhistCalendar_set_TwoDigitYearMax_m8927EC2BCFC2AE7A00F2DF00352DF6C194BEE356_RuntimeMethod_var)));
+	}
+
+IL_004f:
+	{
+		int32_t L_14 = ___0_value;
+		((Calendar_t0A117CC7532A54C17188C2EFEA1F79DB20DF3A3B*)__this)->___twoDigitYearMax_41 = L_14;
+		return;
+	}
+}
+// System.Int32 System.Globalization.ThaiBuddhistCalendar::ToFourDigitYear(System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ThaiBuddhistCalendar_ToFourDigitYear_m2B4137933846D693556A2C5068AC61C904174145 (ThaiBuddhistCalendar_t0A8D34CFB2617DDFE81F878C8E404971CFA70715* __this, int32_t ___0_year, const RuntimeMethod* method) 
+{
+	{
+		int32_t L_0 = ___0_year;
+		if ((((int32_t)L_0) >= ((int32_t)0)))
+		{
+			goto IL_0019;
+		}
+	}
+	{
+		String_t* L_1;
+		L_1 = Environment_GetResourceString_mA14837A574D24E2F2D120D7B5514E849E9986058(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral38E3DBC7FC353425EF3A98DC8DAC6689AF5FD1BE)), NULL);
+		ArgumentOutOfRangeException_tEA2822DAF62B10EEED00E0E3A341D4BAF78CF85F* L_2 = (ArgumentOutOfRangeException_tEA2822DAF62B10EEED00E0E3A341D4BAF78CF85F*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentOutOfRangeException_tEA2822DAF62B10EEED00E0E3A341D4BAF78CF85F_il2cpp_TypeInfo_var)));
+		NullCheck(L_2);
+		ArgumentOutOfRangeException__ctor_mE5B2755F0BEA043CACF915D5CE140859EE58FA66(L_2, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral1DEDCD1168FE0A01C595FF5B7901D1C14F15F786)), L_1, NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_2, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ThaiBuddhistCalendar_ToFourDigitYear_m2B4137933846D693556A2C5068AC61C904174145_RuntimeMethod_var)));
+	}
+
+IL_0019:
+	{
+		GregorianCalendarHelper_tC77507376E36EEDABC1786237BADF1BF459F9723* L_3 = __this->___helper_43;
+		int32_t L_4 = ___0_year;
+		int32_t L_5;
+		L_5 = VirtualFuncInvoker0< int32_t >::Invoke(27 /* System.Int32 System.Globalization.Calendar::get_TwoDigitYearMax() */, __this);
+		NullCheck(L_3);
+		int32_t L_6;
+		L_6 = GregorianCalendarHelper_ToFourDigitYear_m4E5C6CAD9E549AA1919514CC019D223036110B78(L_3, L_4, L_5, NULL);
+		return L_6;
+	}
+}
+// System.Void System.Globalization.ThaiBuddhistCalendar::.cctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ThaiBuddhistCalendar__cctor_m88620E3EC77CA8F8A93741344FC4A8D282EFD57E (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&EraInfoU5BU5D_t3FC74518173AF52EC901FC118D4BD9A11DE89BAC_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&EraInfo_t93ABF7759E8286C5F600445DF5B6C72AAB351921_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ThaiBuddhistCalendar_t0A8D34CFB2617DDFE81F878C8E404971CFA70715_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		EraInfoU5BU5D_t3FC74518173AF52EC901FC118D4BD9A11DE89BAC* L_0 = (EraInfoU5BU5D_t3FC74518173AF52EC901FC118D4BD9A11DE89BAC*)(EraInfoU5BU5D_t3FC74518173AF52EC901FC118D4BD9A11DE89BAC*)SZArrayNew(EraInfoU5BU5D_t3FC74518173AF52EC901FC118D4BD9A11DE89BAC_il2cpp_TypeInfo_var, (uint32_t)1);
+		EraInfoU5BU5D_t3FC74518173AF52EC901FC118D4BD9A11DE89BAC* L_1 = L_0;
+		EraInfo_t93ABF7759E8286C5F600445DF5B6C72AAB351921* L_2 = (EraInfo_t93ABF7759E8286C5F600445DF5B6C72AAB351921*)il2cpp_codegen_object_new(EraInfo_t93ABF7759E8286C5F600445DF5B6C72AAB351921_il2cpp_TypeInfo_var);
+		NullCheck(L_2);
+		EraInfo__ctor_m5E2876C2D2125D19B666495A090E3ECF2B5F80C9(L_2, 1, 1, 1, 1, ((int32_t)-543), ((int32_t)544), ((int32_t)10542), NULL);
+		NullCheck(L_1);
+		ArrayElementTypeCheck (L_1, L_2);
+		(L_1)->SetAt(static_cast<il2cpp_array_size_t>(0), (EraInfo_t93ABF7759E8286C5F600445DF5B6C72AAB351921*)L_2);
+		((ThaiBuddhistCalendar_t0A8D34CFB2617DDFE81F878C8E404971CFA70715_StaticFields*)il2cpp_codegen_static_fields_for(ThaiBuddhistCalendar_t0A8D34CFB2617DDFE81F878C8E404971CFA70715_il2cpp_TypeInfo_var))->___thaiBuddhistEraInfo_42 = L_1;
+		Il2CppCodeGenWriteBarrier((void**)(&((ThaiBuddhistCalendar_t0A8D34CFB2617DDFE81F878C8E404971CFA70715_StaticFields*)il2cpp_codegen_static_fields_for(ThaiBuddhistCalendar_t0A8D34CFB2617DDFE81F878C8E404971CFA70715_il2cpp_TypeInfo_var))->___thaiBuddhistEraInfo_42), (void*)L_1);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Globalization.UmAlQuraCalendar/DateMapping[] System.Globalization.UmAlQuraCalendar::InitDateMapping()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DateMappingU5BU5D_tAE26CCACFFC820ECD4675D0D35E04EF7D2A7BA0A* UmAlQuraCalendar_InitDateMapping_mB6C5F95BFC613BE36E279C4339703FE29D06271F (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&DateMappingU5BU5D_tAE26CCACFFC820ECD4675D0D35E04EF7D2A7BA0A_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Int16U5BU5D_t8175CE8DD9C9F9FB0CF4F58E45BC570575B43CFB_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CPrivateImplementationDetailsU3E_t9FFB0BEB067161CE52A63D5857FEA61F74F17A50____7BEC6AD454781FDCD8D475B3418629CBABB3BF9CA66FA80009D608A1A60D0696_52_FieldInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	Int16U5BU5D_t8175CE8DD9C9F9FB0CF4F58E45BC570575B43CFB* V_0 = NULL;
+	DateMappingU5BU5D_tAE26CCACFFC820ECD4675D0D35E04EF7D2A7BA0A* V_1 = NULL;
+	int32_t V_2 = 0;
+	{
+		Int16U5BU5D_t8175CE8DD9C9F9FB0CF4F58E45BC570575B43CFB* L_0 = (Int16U5BU5D_t8175CE8DD9C9F9FB0CF4F58E45BC570575B43CFB*)(Int16U5BU5D_t8175CE8DD9C9F9FB0CF4F58E45BC570575B43CFB*)SZArrayNew(Int16U5BU5D_t8175CE8DD9C9F9FB0CF4F58E45BC570575B43CFB_il2cpp_TypeInfo_var, (uint32_t)((int32_t)736));
+		Int16U5BU5D_t8175CE8DD9C9F9FB0CF4F58E45BC570575B43CFB* L_1 = L_0;
+		RuntimeFieldHandle_t6E4C45B6D2EA12FC99185805A7E77527899B25C5 L_2 = { reinterpret_cast<intptr_t> (U3CPrivateImplementationDetailsU3E_t9FFB0BEB067161CE52A63D5857FEA61F74F17A50____7BEC6AD454781FDCD8D475B3418629CBABB3BF9CA66FA80009D608A1A60D0696_52_FieldInfo_var) };
+		RuntimeHelpers_InitializeArray_m751372AA3F24FBF6DA9B9D687CBFA2DE436CAB9B((RuntimeArray*)L_1, L_2, NULL);
+		V_0 = L_1;
+		Int16U5BU5D_t8175CE8DD9C9F9FB0CF4F58E45BC570575B43CFB* L_3 = V_0;
+		NullCheck(L_3);
+		DateMappingU5BU5D_tAE26CCACFFC820ECD4675D0D35E04EF7D2A7BA0A* L_4 = (DateMappingU5BU5D_tAE26CCACFFC820ECD4675D0D35E04EF7D2A7BA0A*)(DateMappingU5BU5D_tAE26CCACFFC820ECD4675D0D35E04EF7D2A7BA0A*)SZArrayNew(DateMappingU5BU5D_tAE26CCACFFC820ECD4675D0D35E04EF7D2A7BA0A_il2cpp_TypeInfo_var, (uint32_t)((int32_t)(((int32_t)(((RuntimeArray*)L_3)->max_length))/4)));
+		V_1 = L_4;
+		V_2 = 0;
+		goto IL_004f;
+	}
+
+IL_0025:
+	{
+		DateMappingU5BU5D_tAE26CCACFFC820ECD4675D0D35E04EF7D2A7BA0A* L_5 = V_1;
+		int32_t L_6 = V_2;
+		Int16U5BU5D_t8175CE8DD9C9F9FB0CF4F58E45BC570575B43CFB* L_7 = V_0;
+		int32_t L_8 = V_2;
+		NullCheck(L_7);
+		int32_t L_9 = ((int32_t)il2cpp_codegen_multiply(L_8, 4));
+		int16_t L_10 = (L_7)->GetAt(static_cast<il2cpp_array_size_t>(L_9));
+		Int16U5BU5D_t8175CE8DD9C9F9FB0CF4F58E45BC570575B43CFB* L_11 = V_0;
+		int32_t L_12 = V_2;
+		NullCheck(L_11);
+		int32_t L_13 = ((int32_t)il2cpp_codegen_add(((int32_t)il2cpp_codegen_multiply(L_12, 4)), 1));
+		int16_t L_14 = (L_11)->GetAt(static_cast<il2cpp_array_size_t>(L_13));
+		Int16U5BU5D_t8175CE8DD9C9F9FB0CF4F58E45BC570575B43CFB* L_15 = V_0;
+		int32_t L_16 = V_2;
+		NullCheck(L_15);
+		int32_t L_17 = ((int32_t)il2cpp_codegen_add(((int32_t)il2cpp_codegen_multiply(L_16, 4)), 2));
+		int16_t L_18 = (L_15)->GetAt(static_cast<il2cpp_array_size_t>(L_17));
+		Int16U5BU5D_t8175CE8DD9C9F9FB0CF4F58E45BC570575B43CFB* L_19 = V_0;
+		int32_t L_20 = V_2;
+		NullCheck(L_19);
+		int32_t L_21 = ((int32_t)il2cpp_codegen_add(((int32_t)il2cpp_codegen_multiply(L_20, 4)), 3));
+		int16_t L_22 = (L_19)->GetAt(static_cast<il2cpp_array_size_t>(L_21));
+		DateMapping_tD71D0AF5C7C6CB4F9517C292B1B61D7AF7CFCCFD L_23;
+		memset((&L_23), 0, sizeof(L_23));
+		DateMapping__ctor_m6861844EAE45E8AD7B3289F9C6C487146D6F7A6E((&L_23), L_10, L_14, L_18, L_22, /*hidden argument*/NULL);
+		NullCheck(L_5);
+		(L_5)->SetAt(static_cast<il2cpp_array_size_t>(L_6), (DateMapping_tD71D0AF5C7C6CB4F9517C292B1B61D7AF7CFCCFD)L_23);
+		int32_t L_24 = V_2;
+		V_2 = ((int32_t)il2cpp_codegen_add(L_24, 1));
+	}
+
+IL_004f:
+	{
+		int32_t L_25 = V_2;
+		DateMappingU5BU5D_tAE26CCACFFC820ECD4675D0D35E04EF7D2A7BA0A* L_26 = V_1;
+		NullCheck(L_26);
+		if ((((int32_t)L_25) < ((int32_t)((int32_t)(((RuntimeArray*)L_26)->max_length)))))
+		{
+			goto IL_0025;
+		}
+	}
+	{
+		DateMappingU5BU5D_tAE26CCACFFC820ECD4675D0D35E04EF7D2A7BA0A* L_27 = V_1;
+		return L_27;
+	}
+}
+// System.DateTime System.Globalization.UmAlQuraCalendar::get_MinSupportedDateTime()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D UmAlQuraCalendar_get_MinSupportedDateTime_m4D0B17F351CAD064045277D4B40ADA8B20B5B796 (UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		il2cpp_codegen_runtime_class_init_inline(UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_il2cpp_TypeInfo_var);
+		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_0 = ((UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_StaticFields*)il2cpp_codegen_static_fields_for(UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_il2cpp_TypeInfo_var))->___minDate_43;
+		return L_0;
+	}
+}
+// System.DateTime System.Globalization.UmAlQuraCalendar::get_MaxSupportedDateTime()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D UmAlQuraCalendar_get_MaxSupportedDateTime_m8E307AE7AE58867B44DE6DFAFE392DD42CD28EC2 (UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		il2cpp_codegen_runtime_class_init_inline(UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_il2cpp_TypeInfo_var);
+		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_0 = ((UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_StaticFields*)il2cpp_codegen_static_fields_for(UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_il2cpp_TypeInfo_var))->___maxDate_44;
+		return L_0;
+	}
+}
+// System.Void System.Globalization.UmAlQuraCalendar::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UmAlQuraCalendar__ctor_m62DE5CC45080254F3F218998A976A7254AA79D31 (UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B* __this, const RuntimeMethod* method) 
+{
+	{
+		Calendar__ctor_mCA44DC39A700EAA06125E40215800356CDDFA65D(__this, NULL);
+		return;
+	}
+}
+// System.Int32 System.Globalization.UmAlQuraCalendar::get_BaseCalendarID()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t UmAlQuraCalendar_get_BaseCalendarID_m6E957C24DB80E1F23F15BBCDF4E2EB83A2E6393D (UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B* __this, const RuntimeMethod* method) 
+{
+	{
+		return 6;
+	}
+}
+// System.Int32 System.Globalization.UmAlQuraCalendar::get_ID()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t UmAlQuraCalendar_get_ID_m66E6CDAC88BD8329F967F1E77E4D52D4C052DA34 (UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B* __this, const RuntimeMethod* method) 
+{
+	{
+		return ((int32_t)23);
+	}
+}
+// System.Void System.Globalization.UmAlQuraCalendar::ConvertHijriToGregorian(System.Int32,System.Int32,System.Int32,System.Int32&,System.Int32&,System.Int32&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UmAlQuraCalendar_ConvertHijriToGregorian_mE45B2D9E097D18D797F6EE6CCBA23BD95FAEEEC2 (int32_t ___0_HijriYear, int32_t ___1_HijriMonth, int32_t ___2_HijriDay, int32_t* ___3_yg, int32_t* ___4_mg, int32_t* ___5_dg, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	int32_t V_0 = 0;
+	int32_t V_1 = 0;
+	int32_t V_2 = 0;
+	DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D V_3;
+	memset((&V_3), 0, sizeof(V_3));
+	int32_t V_4 = 0;
+	{
+		int32_t L_0 = ___2_HijriDay;
+		V_2 = ((int32_t)il2cpp_codegen_subtract(L_0, 1));
+		int32_t L_1 = ___0_HijriYear;
+		V_0 = ((int32_t)il2cpp_codegen_subtract(L_1, ((int32_t)1318)));
+		il2cpp_codegen_runtime_class_init_inline(UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_il2cpp_TypeInfo_var);
+		DateMappingU5BU5D_tAE26CCACFFC820ECD4675D0D35E04EF7D2A7BA0A* L_2 = ((UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_StaticFields*)il2cpp_codegen_static_fields_for(UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_il2cpp_TypeInfo_var))->___HijriYearInfo_42;
+		int32_t L_3 = V_0;
+		NullCheck(L_2);
+		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_4 = ((L_2)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_3)))->___GregorianDate_1;
+		V_3 = L_4;
+		DateMappingU5BU5D_tAE26CCACFFC820ECD4675D0D35E04EF7D2A7BA0A* L_5 = ((UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_StaticFields*)il2cpp_codegen_static_fields_for(UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_il2cpp_TypeInfo_var))->___HijriYearInfo_42;
+		int32_t L_6 = V_0;
+		NullCheck(L_5);
+		int32_t L_7 = ((L_5)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_6)))->___HijriMonthsLengthFlags_0;
+		V_1 = L_7;
+		V_4 = 1;
+		goto IL_0046;
+	}
+
+IL_0033:
+	{
+		int32_t L_8 = V_2;
+		int32_t L_9 = V_1;
+		V_2 = ((int32_t)il2cpp_codegen_add(L_8, ((int32_t)il2cpp_codegen_add(((int32_t)29), ((int32_t)(L_9&1))))));
+		int32_t L_10 = V_1;
+		V_1 = ((int32_t)(L_10>>1));
+		int32_t L_11 = V_4;
+		V_4 = ((int32_t)il2cpp_codegen_add(L_11, 1));
+	}
+
+IL_0046:
+	{
+		int32_t L_12 = V_4;
+		int32_t L_13 = ___1_HijriMonth;
+		if ((((int32_t)L_12) < ((int32_t)L_13)))
+		{
+			goto IL_0033;
+		}
+	}
+	{
+		int32_t L_14 = V_2;
+		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_15;
+		L_15 = DateTime_AddDays_m9DC06105845A82FEAF697D5E30308ABD49E5721B((&V_3), ((double)L_14), NULL);
+		V_3 = L_15;
+		int32_t* L_16 = ___3_yg;
+		int32_t L_17;
+		L_17 = DateTime_get_Year_m00A88C4CEE07B7906F5F7F75C254B769808F5138((&V_3), NULL);
+		*((int32_t*)L_16) = (int32_t)L_17;
+		int32_t* L_18 = ___4_mg;
+		int32_t L_19;
+		L_19 = DateTime_get_Month_m899C6602DE8198990B2CAF5EBC04CC67764E3DA2((&V_3), NULL);
+		*((int32_t*)L_18) = (int32_t)L_19;
+		int32_t* L_20 = ___5_dg;
+		int32_t L_21;
+		L_21 = DateTime_get_Day_m872DBCA4C79955EC1E27EB68746B6C2F6A183B28((&V_3), NULL);
+		*((int32_t*)L_20) = (int32_t)L_21;
+		return;
+	}
+}
+// System.Int64 System.Globalization.UmAlQuraCalendar::GetAbsoluteDateUmAlQura(System.Int32,System.Int32,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int64_t UmAlQuraCalendar_GetAbsoluteDateUmAlQura_mEB0C87D2A6A2BB4B0A4DBF07E40B22686AC9E179 (int32_t ___0_year, int32_t ___1_month, int32_t ___2_day, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	int32_t V_0 = 0;
+	int32_t V_1 = 0;
+	int32_t V_2 = 0;
+	{
+		V_0 = 0;
+		V_1 = 0;
+		V_2 = 0;
+		int32_t L_0 = ___0_year;
+		int32_t L_1 = ___1_month;
+		int32_t L_2 = ___2_day;
+		il2cpp_codegen_runtime_class_init_inline(UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_il2cpp_TypeInfo_var);
+		UmAlQuraCalendar_ConvertHijriToGregorian_mE45B2D9E097D18D797F6EE6CCBA23BD95FAEEEC2(L_0, L_1, L_2, (&V_0), (&V_1), (&V_2), NULL);
+		int32_t L_3 = V_0;
+		int32_t L_4 = V_1;
+		int32_t L_5 = V_2;
+		il2cpp_codegen_runtime_class_init_inline(GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815_il2cpp_TypeInfo_var);
+		int64_t L_6;
+		L_6 = GregorianCalendar_GetAbsoluteDate_m439E3A280382F2BC01623E9426FD5FA25DBE642A(L_3, L_4, L_5, NULL);
+		return L_6;
+	}
+}
+// System.Void System.Globalization.UmAlQuraCalendar::CheckTicksRange(System.Int64)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UmAlQuraCalendar_CheckTicksRange_mBA2959172A68F005AA5CA882A79BC94E6CB9E58B (int64_t ___0_ticks, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		int64_t L_0 = ___0_ticks;
+		il2cpp_codegen_runtime_class_init_inline(UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_il2cpp_TypeInfo_var);
+		int64_t L_1;
+		L_1 = DateTime_get_Ticks_mC2CF04ED0EAB425C72C2532FFC5743777F3C93A6((&((UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_StaticFields*)il2cpp_codegen_static_fields_for(UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_il2cpp_TypeInfo_var))->___minDate_43), NULL);
+		if ((((int64_t)L_0) < ((int64_t)L_1)))
+		{
+			goto IL_001a;
+		}
+	}
+	{
+		int64_t L_2 = ___0_ticks;
+		il2cpp_codegen_runtime_class_init_inline(UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_il2cpp_TypeInfo_var);
+		int64_t L_3;
+		L_3 = DateTime_get_Ticks_mC2CF04ED0EAB425C72C2532FFC5743777F3C93A6((&((UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_StaticFields*)il2cpp_codegen_static_fields_for(UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_il2cpp_TypeInfo_var))->___maxDate_44), NULL);
+		if ((((int64_t)L_2) <= ((int64_t)L_3)))
+		{
+			goto IL_004d;
+		}
+	}
+
+IL_001a:
+	{
+		il2cpp_codegen_runtime_class_init_inline(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8FFA378E0_il2cpp_TypeInfo_var)));
+		CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8FFA378E0* L_4;
+		L_4 = CultureInfo_get_InvariantCulture_mD1E96DC845E34B10F78CB744B0CB5D7D63CEB1E6(NULL);
+		String_t* L_5;
+		L_5 = Environment_GetResourceString_mA14837A574D24E2F2D120D7B5514E849E9986058(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralAABA6F39B93C5C2BCA72B3F4962E6929214F5CC7)), NULL);
+		il2cpp_codegen_runtime_class_init_inline(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_il2cpp_TypeInfo_var)));
+		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_6 = ((UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_StaticFields*)il2cpp_codegen_static_fields_for(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_il2cpp_TypeInfo_var))))->___minDate_43;
+		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_7 = L_6;
+		RuntimeObject* L_8 = Box(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D_il2cpp_TypeInfo_var)), &L_7);
+		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_9 = ((UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_StaticFields*)il2cpp_codegen_static_fields_for(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_il2cpp_TypeInfo_var))))->___maxDate_44;
+		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_10 = L_9;
+		RuntimeObject* L_11 = Box(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D_il2cpp_TypeInfo_var)), &L_10);
+		String_t* L_12;
+		L_12 = String_Format_m44BF8BF44DC9B67D6CF265A1A2703A6D743F5C56(L_4, L_5, L_8, L_11, NULL);
+		ArgumentOutOfRangeException_tEA2822DAF62B10EEED00E0E3A341D4BAF78CF85F* L_13 = (ArgumentOutOfRangeException_tEA2822DAF62B10EEED00E0E3A341D4BAF78CF85F*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentOutOfRangeException_tEA2822DAF62B10EEED00E0E3A341D4BAF78CF85F_il2cpp_TypeInfo_var)));
+		NullCheck(L_13);
+		ArgumentOutOfRangeException__ctor_mE5B2755F0BEA043CACF915D5CE140859EE58FA66(L_13, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral51C6279E31F7483126B79E3000116001A915B690)), L_12, NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_13, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&UmAlQuraCalendar_CheckTicksRange_mBA2959172A68F005AA5CA882A79BC94E6CB9E58B_RuntimeMethod_var)));
+	}
+
+IL_004d:
+	{
+		return;
+	}
+}
+// System.Void System.Globalization.UmAlQuraCalendar::CheckEraRange(System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UmAlQuraCalendar_CheckEraRange_mDE9AA06043506EEA0A0928177B8ECFFD17C2D5E6 (int32_t ___0_era, const RuntimeMethod* method) 
+{
+	{
+		int32_t L_0 = ___0_era;
+		if (!L_0)
+		{
+			goto IL_001c;
+		}
+	}
+	{
+		int32_t L_1 = ___0_era;
+		if ((((int32_t)L_1) == ((int32_t)1)))
+		{
+			goto IL_001c;
+		}
+	}
+	{
+		String_t* L_2;
+		L_2 = Environment_GetResourceString_mA14837A574D24E2F2D120D7B5514E849E9986058(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral9CC27BA3BECD4E1F318E7086721B8343044B6A04)), NULL);
+		ArgumentOutOfRangeException_tEA2822DAF62B10EEED00E0E3A341D4BAF78CF85F* L_3 = (ArgumentOutOfRangeException_tEA2822DAF62B10EEED00E0E3A341D4BAF78CF85F*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentOutOfRangeException_tEA2822DAF62B10EEED00E0E3A341D4BAF78CF85F_il2cpp_TypeInfo_var)));
+		NullCheck(L_3);
+		ArgumentOutOfRangeException__ctor_mE5B2755F0BEA043CACF915D5CE140859EE58FA66(L_3, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral1CB28FC33FA49E778D66797930C2FE5381A2660D)), L_2, NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_3, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&UmAlQuraCalendar_CheckEraRange_mDE9AA06043506EEA0A0928177B8ECFFD17C2D5E6_RuntimeMethod_var)));
+	}
+
+IL_001c:
+	{
+		return;
+	}
+}
+// System.Void System.Globalization.UmAlQuraCalendar::CheckYearRange(System.Int32,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UmAlQuraCalendar_CheckYearRange_mCEA99910DFF1659B5DD45B3C9A4502936A656E02 (int32_t ___0_year, int32_t ___1_era, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		int32_t L_0 = ___1_era;
+		il2cpp_codegen_runtime_class_init_inline(UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_il2cpp_TypeInfo_var);
+		UmAlQuraCalendar_CheckEraRange_mDE9AA06043506EEA0A0928177B8ECFFD17C2D5E6(L_0, NULL);
+		int32_t L_1 = ___0_year;
+		if ((((int32_t)L_1) < ((int32_t)((int32_t)1318))))
+		{
+			goto IL_0016;
+		}
+	}
+	{
+		int32_t L_2 = ___0_year;
+		if ((((int32_t)L_2) <= ((int32_t)((int32_t)1500))))
+		{
+			goto IL_0049;
+		}
+	}
+
+IL_0016:
+	{
+		il2cpp_codegen_runtime_class_init_inline(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8FFA378E0_il2cpp_TypeInfo_var)));
+		CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8FFA378E0* L_3;
+		L_3 = CultureInfo_get_CurrentCulture_m8A4580F49DDD7E9DB34C699965423DB8E3BBA9A5(NULL);
+		String_t* L_4;
+		L_4 = Environment_GetResourceString_mA14837A574D24E2F2D120D7B5514E849E9986058(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralCB6B67D4653121AE0F63EE256975A0DBD0FAF6B1)), NULL);
+		int32_t L_5 = ((int32_t)1318);
+		RuntimeObject* L_6 = Box(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var)), &L_5);
+		int32_t L_7 = ((int32_t)1500);
+		RuntimeObject* L_8 = Box(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var)), &L_7);
+		String_t* L_9;
+		L_9 = String_Format_m44BF8BF44DC9B67D6CF265A1A2703A6D743F5C56(L_3, L_4, L_6, L_8, NULL);
+		ArgumentOutOfRangeException_tEA2822DAF62B10EEED00E0E3A341D4BAF78CF85F* L_10 = (ArgumentOutOfRangeException_tEA2822DAF62B10EEED00E0E3A341D4BAF78CF85F*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentOutOfRangeException_tEA2822DAF62B10EEED00E0E3A341D4BAF78CF85F_il2cpp_TypeInfo_var)));
+		NullCheck(L_10);
+		ArgumentOutOfRangeException__ctor_mE5B2755F0BEA043CACF915D5CE140859EE58FA66(L_10, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral1DEDCD1168FE0A01C595FF5B7901D1C14F15F786)), L_9, NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_10, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&UmAlQuraCalendar_CheckYearRange_mCEA99910DFF1659B5DD45B3C9A4502936A656E02_RuntimeMethod_var)));
+	}
+
+IL_0049:
+	{
+		return;
+	}
+}
+// System.Void System.Globalization.UmAlQuraCalendar::CheckYearMonthRange(System.Int32,System.Int32,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UmAlQuraCalendar_CheckYearMonthRange_mD7B80AB6ADA0B466AEED666697FD1CBBF85136B8 (int32_t ___0_year, int32_t ___1_month, int32_t ___2_era, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		int32_t L_0 = ___0_year;
+		int32_t L_1 = ___2_era;
+		il2cpp_codegen_runtime_class_init_inline(UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_il2cpp_TypeInfo_var);
+		UmAlQuraCalendar_CheckYearRange_mCEA99910DFF1659B5DD45B3C9A4502936A656E02(L_0, L_1, NULL);
+		int32_t L_2 = ___1_month;
+		if ((((int32_t)L_2) < ((int32_t)1)))
+		{
+			goto IL_0010;
+		}
+	}
+	{
+		int32_t L_3 = ___1_month;
+		if ((((int32_t)L_3) <= ((int32_t)((int32_t)12))))
+		{
+			goto IL_0025;
+		}
+	}
+
+IL_0010:
+	{
+		String_t* L_4;
+		L_4 = Environment_GetResourceString_mA14837A574D24E2F2D120D7B5514E849E9986058(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralFAE2329D6E15DBA161C93E78324E39B842CF47E4)), NULL);
+		ArgumentOutOfRangeException_tEA2822DAF62B10EEED00E0E3A341D4BAF78CF85F* L_5 = (ArgumentOutOfRangeException_tEA2822DAF62B10EEED00E0E3A341D4BAF78CF85F*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentOutOfRangeException_tEA2822DAF62B10EEED00E0E3A341D4BAF78CF85F_il2cpp_TypeInfo_var)));
+		NullCheck(L_5);
+		ArgumentOutOfRangeException__ctor_mE5B2755F0BEA043CACF915D5CE140859EE58FA66(L_5, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral30D99F99F1F4688CE08A3BF1B034C9CD49C19174)), L_4, NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_5, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&UmAlQuraCalendar_CheckYearMonthRange_mD7B80AB6ADA0B466AEED666697FD1CBBF85136B8_RuntimeMethod_var)));
+	}
+
+IL_0025:
+	{
+		return;
+	}
+}
+// System.Void System.Globalization.UmAlQuraCalendar::ConvertGregorianToHijri(System.DateTime,System.Int32&,System.Int32&,System.Int32&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UmAlQuraCalendar_ConvertGregorianToHijri_m26832DA219E1250C7003B72C0F213301DDEC31A6 (DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D ___0_time, int32_t* ___1_HijriYear, int32_t* ___2_HijriMonth, int32_t* ___3_HijriDay, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	int32_t V_0 = 0;
+	int32_t V_1 = 0;
+	int32_t V_2 = 0;
+	double V_3 = 0.0;
+	TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A V_4;
+	memset((&V_4), 0, sizeof(V_4));
+	int32_t V_5 = 0;
+	int32_t V_6 = 0;
+	int32_t V_7 = 0;
+	{
+		V_5 = 0;
+		V_6 = 0;
+		V_7 = 0;
+		int64_t L_0;
+		L_0 = DateTime_get_Ticks_mC2CF04ED0EAB425C72C2532FFC5743777F3C93A6((&___0_time), NULL);
+		il2cpp_codegen_runtime_class_init_inline(UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_il2cpp_TypeInfo_var);
+		int64_t L_1;
+		L_1 = DateTime_get_Ticks_mC2CF04ED0EAB425C72C2532FFC5743777F3C93A6((&((UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_StaticFields*)il2cpp_codegen_static_fields_for(UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_il2cpp_TypeInfo_var))->___minDate_43), NULL);
+		V_0 = ((int32_t)(((int32_t)((int64_t)(((int64_t)il2cpp_codegen_subtract(L_0, L_1))/((int64_t)864000000000LL))))/((int32_t)355)));
+	}
+
+IL_002d:
+	{
+		il2cpp_codegen_runtime_class_init_inline(UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_il2cpp_TypeInfo_var);
+		DateMappingU5BU5D_tAE26CCACFFC820ECD4675D0D35E04EF7D2A7BA0A* L_2 = ((UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_StaticFields*)il2cpp_codegen_static_fields_for(UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_il2cpp_TypeInfo_var))->___HijriYearInfo_42;
+		int32_t L_3 = V_0;
+		int32_t L_4 = ((int32_t)il2cpp_codegen_add(L_3, 1));
+		V_0 = L_4;
+		NullCheck(L_2);
+		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_5 = ((L_2)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_4)))->___GregorianDate_1;
+		int32_t L_6;
+		L_6 = DateTime_CompareTo_m4A3000CD4FF15EA7CA2E9C5C95A9D07F3AA8D35D((&___0_time), L_5, NULL);
+		if ((((int32_t)L_6) > ((int32_t)0)))
+		{
+			goto IL_002d;
+		}
+	}
+	{
+		il2cpp_codegen_runtime_class_init_inline(UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_il2cpp_TypeInfo_var);
+		DateMappingU5BU5D_tAE26CCACFFC820ECD4675D0D35E04EF7D2A7BA0A* L_7 = ((UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_StaticFields*)il2cpp_codegen_static_fields_for(UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_il2cpp_TypeInfo_var))->___HijriYearInfo_42;
+		int32_t L_8 = V_0;
+		NullCheck(L_7);
+		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_9 = ((L_7)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_8)))->___GregorianDate_1;
+		int32_t L_10;
+		L_10 = DateTime_CompareTo_m4A3000CD4FF15EA7CA2E9C5C95A9D07F3AA8D35D((&___0_time), L_9, NULL);
+		if (!L_10)
+		{
+			goto IL_0068;
+		}
+	}
+	{
+		int32_t L_11 = V_0;
+		V_0 = ((int32_t)il2cpp_codegen_subtract(L_11, 1));
+	}
+
+IL_0068:
+	{
+		il2cpp_codegen_runtime_class_init_inline(UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_il2cpp_TypeInfo_var);
+		DateMappingU5BU5D_tAE26CCACFFC820ECD4675D0D35E04EF7D2A7BA0A* L_12 = ((UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_StaticFields*)il2cpp_codegen_static_fields_for(UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_il2cpp_TypeInfo_var))->___HijriYearInfo_42;
+		int32_t L_13 = V_0;
+		NullCheck(L_12);
+		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_14 = ((L_12)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_13)))->___GregorianDate_1;
+		TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A L_15;
+		L_15 = DateTime_Subtract_m4064A98F489219E9C414DF5C03EE041351B4502A((&___0_time), L_14, NULL);
+		V_4 = L_15;
+		int32_t L_16 = V_0;
+		V_5 = ((int32_t)il2cpp_codegen_add(L_16, ((int32_t)1318)));
+		V_6 = 1;
+		V_7 = 1;
+		double L_17;
+		L_17 = TimeSpan_get_TotalDays_m7B3557D0DD79E39DFC6C08BAC756B1B5DE2D4108((&V_4), NULL);
+		V_3 = L_17;
+		DateMappingU5BU5D_tAE26CCACFFC820ECD4675D0D35E04EF7D2A7BA0A* L_18 = ((UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_StaticFields*)il2cpp_codegen_static_fields_for(UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_il2cpp_TypeInfo_var))->___HijriYearInfo_42;
+		int32_t L_19 = V_0;
+		NullCheck(L_18);
+		int32_t L_20 = ((L_18)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_19)))->___HijriMonthsLengthFlags_0;
+		V_1 = L_20;
+		int32_t L_21 = V_1;
+		V_2 = ((int32_t)il2cpp_codegen_add(((int32_t)29), ((int32_t)(L_21&1))));
+		goto IL_00c8;
+	}
+
+IL_00b2:
+	{
+		double L_22 = V_3;
+		int32_t L_23 = V_2;
+		V_3 = ((double)il2cpp_codegen_subtract(L_22, ((double)L_23)));
+		int32_t L_24 = V_1;
+		V_1 = ((int32_t)(L_24>>1));
+		int32_t L_25 = V_1;
+		V_2 = ((int32_t)il2cpp_codegen_add(((int32_t)29), ((int32_t)(L_25&1))));
+		int32_t L_26 = V_6;
+		V_6 = ((int32_t)il2cpp_codegen_add(L_26, 1));
+	}
+
+IL_00c8:
+	{
+		double L_27 = V_3;
+		int32_t L_28 = V_2;
+		if ((((double)L_27) >= ((double)((double)L_28))))
+		{
+			goto IL_00b2;
+		}
+	}
+	{
+		int32_t L_29 = V_7;
+		double L_30 = V_3;
+		V_7 = ((int32_t)il2cpp_codegen_add(L_29, il2cpp_codegen_cast_double_to_int<int32_t>(L_30)));
+		int32_t* L_31 = ___3_HijriDay;
+		int32_t L_32 = V_7;
+		*((int32_t*)L_31) = (int32_t)L_32;
+		int32_t* L_33 = ___2_HijriMonth;
+		int32_t L_34 = V_6;
+		*((int32_t*)L_33) = (int32_t)L_34;
+		int32_t* L_35 = ___1_HijriYear;
+		int32_t L_36 = V_5;
+		*((int32_t*)L_35) = (int32_t)L_36;
+		return;
+	}
+}
+// System.Int32 System.Globalization.UmAlQuraCalendar::GetDatePart(System.DateTime,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t UmAlQuraCalendar_GetDatePart_m5CDAB4C4A0D261FF258EA853BC6039EC4B1A334D (UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B* __this, DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D ___0_time, int32_t ___1_part, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	int32_t V_0 = 0;
+	int32_t V_1 = 0;
+	int32_t V_2 = 0;
+	{
+		V_0 = 0;
+		V_1 = 0;
+		V_2 = 0;
+		int64_t L_0;
+		L_0 = DateTime_get_Ticks_mC2CF04ED0EAB425C72C2532FFC5743777F3C93A6((&___0_time), NULL);
+		il2cpp_codegen_runtime_class_init_inline(UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_il2cpp_TypeInfo_var);
+		UmAlQuraCalendar_CheckTicksRange_mBA2959172A68F005AA5CA882A79BC94E6CB9E58B(L_0, NULL);
+		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_1 = ___0_time;
+		UmAlQuraCalendar_ConvertGregorianToHijri_m26832DA219E1250C7003B72C0F213301DDEC31A6(L_1, (&V_0), (&V_1), (&V_2), NULL);
+		int32_t L_2 = ___1_part;
+		if (L_2)
+		{
+			goto IL_0023;
+		}
+	}
+	{
+		int32_t L_3 = V_0;
+		return L_3;
+	}
+
+IL_0023:
+	{
+		int32_t L_4 = ___1_part;
+		if ((!(((uint32_t)L_4) == ((uint32_t)2))))
+		{
+			goto IL_0029;
+		}
+	}
+	{
+		int32_t L_5 = V_1;
+		return L_5;
+	}
+
+IL_0029:
+	{
+		int32_t L_6 = ___1_part;
+		if ((!(((uint32_t)L_6) == ((uint32_t)3))))
+		{
+			goto IL_002f;
+		}
+	}
+	{
+		int32_t L_7 = V_2;
+		return L_7;
+	}
+
+IL_002f:
+	{
+		int32_t L_8 = ___1_part;
+		if ((!(((uint32_t)L_8) == ((uint32_t)1))))
+		{
+			goto IL_0049;
+		}
+	}
+	{
+		int32_t L_9 = V_0;
+		int32_t L_10 = V_1;
+		int32_t L_11 = V_2;
+		il2cpp_codegen_runtime_class_init_inline(UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_il2cpp_TypeInfo_var);
+		int64_t L_12;
+		L_12 = UmAlQuraCalendar_GetAbsoluteDateUmAlQura_mEB0C87D2A6A2BB4B0A4DBF07E40B22686AC9E179(L_9, L_10, L_11, NULL);
+		int32_t L_13 = V_0;
+		int64_t L_14;
+		L_14 = UmAlQuraCalendar_GetAbsoluteDateUmAlQura_mEB0C87D2A6A2BB4B0A4DBF07E40B22686AC9E179(L_13, 1, 1, NULL);
+		return ((int32_t)((int64_t)il2cpp_codegen_add(((int64_t)il2cpp_codegen_subtract(L_12, L_14)), ((int64_t)1))));
+	}
+
+IL_0049:
+	{
+		String_t* L_15;
+		L_15 = Environment_GetResourceString_mA14837A574D24E2F2D120D7B5514E849E9986058(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralD6E6EEF1109E8CC713826B01CDCD6A3C6C168B7A)), NULL);
+		InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB* L_16 = (InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB_il2cpp_TypeInfo_var)));
+		NullCheck(L_16);
+		InvalidOperationException__ctor_mE4CB6F4712AB6D99A2358FBAE2E052B3EE976162(L_16, L_15, NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_16, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&UmAlQuraCalendar_GetDatePart_m5CDAB4C4A0D261FF258EA853BC6039EC4B1A334D_RuntimeMethod_var)));
+	}
+}
+// System.Int32 System.Globalization.UmAlQuraCalendar::GetDayOfMonth(System.DateTime)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t UmAlQuraCalendar_GetDayOfMonth_m0C7DF121DF63868369EFEB2557BE4653BE4D7064 (UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B* __this, DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D ___0_time, const RuntimeMethod* method) 
+{
+	{
+		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_0 = ___0_time;
+		int32_t L_1;
+		L_1 = VirtualFuncInvoker2< int32_t, DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D, int32_t >::Invoke(30 /* System.Int32 System.Globalization.UmAlQuraCalendar::GetDatePart(System.DateTime,System.Int32) */, __this, L_0, 3);
+		return L_1;
+	}
+}
+// System.DayOfWeek System.Globalization.UmAlQuraCalendar::GetDayOfWeek(System.DateTime)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t UmAlQuraCalendar_GetDayOfWeek_m12FA00B83A28A4D491BB605339919D466080D67D (UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B* __this, DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D ___0_time, const RuntimeMethod* method) 
+{
+	{
+		int64_t L_0;
+		L_0 = DateTime_get_Ticks_mC2CF04ED0EAB425C72C2532FFC5743777F3C93A6((&___0_time), NULL);
+		return (int32_t)(((int32_t)(((int32_t)((int64_t)il2cpp_codegen_add(((int64_t)(L_0/((int64_t)864000000000LL))), ((int64_t)1))))%7)));
+	}
+}
+// System.Int32 System.Globalization.UmAlQuraCalendar::GetDaysInMonth(System.Int32,System.Int32,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t UmAlQuraCalendar_GetDaysInMonth_mC22BE263E478B34C4B3C812B1FDCAB33D588282E (UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B* __this, int32_t ___0_year, int32_t ___1_month, int32_t ___2_era, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		int32_t L_0 = ___0_year;
+		int32_t L_1 = ___1_month;
+		int32_t L_2 = ___2_era;
+		il2cpp_codegen_runtime_class_init_inline(UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_il2cpp_TypeInfo_var);
+		UmAlQuraCalendar_CheckYearMonthRange_mD7B80AB6ADA0B466AEED666697FD1CBBF85136B8(L_0, L_1, L_2, NULL);
+		DateMappingU5BU5D_tAE26CCACFFC820ECD4675D0D35E04EF7D2A7BA0A* L_3 = ((UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_StaticFields*)il2cpp_codegen_static_fields_for(UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_il2cpp_TypeInfo_var))->___HijriYearInfo_42;
+		int32_t L_4 = ___0_year;
+		NullCheck(L_3);
+		int32_t L_5 = ((L_3)->GetAddressAt(static_cast<il2cpp_array_size_t>(((int32_t)il2cpp_codegen_subtract(L_4, ((int32_t)1318))))))->___HijriMonthsLengthFlags_0;
+		int32_t L_6 = ___1_month;
+		if (((int32_t)(L_5&((int32_t)(1<<((int32_t)(((int32_t)il2cpp_codegen_subtract(L_6, 1))&((int32_t)31))))))))
+		{
+			goto IL_002c;
+		}
+	}
+	{
+		return ((int32_t)29);
+	}
+
+IL_002c:
+	{
+		return ((int32_t)30);
+	}
+}
+// System.Int32 System.Globalization.UmAlQuraCalendar::RealGetDaysInYear(System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t UmAlQuraCalendar_RealGetDaysInYear_mA3740641CD7F52F6DAF785DC8B461B12782426F0 (int32_t ___0_year, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	int32_t V_0 = 0;
+	int32_t V_1 = 0;
+	int32_t V_2 = 0;
+	{
+		V_0 = 0;
+		il2cpp_codegen_runtime_class_init_inline(UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_il2cpp_TypeInfo_var);
+		DateMappingU5BU5D_tAE26CCACFFC820ECD4675D0D35E04EF7D2A7BA0A* L_0 = ((UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_StaticFields*)il2cpp_codegen_static_fields_for(UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_il2cpp_TypeInfo_var))->___HijriYearInfo_42;
+		int32_t L_1 = ___0_year;
+		NullCheck(L_0);
+		int32_t L_2 = ((L_0)->GetAddressAt(static_cast<il2cpp_array_size_t>(((int32_t)il2cpp_codegen_subtract(L_1, ((int32_t)1318))))))->___HijriMonthsLengthFlags_0;
+		V_1 = L_2;
+		V_2 = 1;
+		goto IL_002e;
+	}
+
+IL_001d:
+	{
+		int32_t L_3 = V_0;
+		int32_t L_4 = V_1;
+		V_0 = ((int32_t)il2cpp_codegen_add(L_3, ((int32_t)il2cpp_codegen_add(((int32_t)29), ((int32_t)(L_4&1))))));
+		int32_t L_5 = V_1;
+		V_1 = ((int32_t)(L_5>>1));
+		int32_t L_6 = V_2;
+		V_2 = ((int32_t)il2cpp_codegen_add(L_6, 1));
+	}
+
+IL_002e:
+	{
+		int32_t L_7 = V_2;
+		if ((((int32_t)L_7) <= ((int32_t)((int32_t)12))))
+		{
+			goto IL_001d;
+		}
+	}
+	{
+		int32_t L_8 = V_0;
+		return L_8;
+	}
+}
+// System.Int32 System.Globalization.UmAlQuraCalendar::GetDaysInYear(System.Int32,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t UmAlQuraCalendar_GetDaysInYear_m5F6F766CC15E1272E410D2DC4CAE68DCECB8177E (UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B* __this, int32_t ___0_year, int32_t ___1_era, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		int32_t L_0 = ___0_year;
+		int32_t L_1 = ___1_era;
+		il2cpp_codegen_runtime_class_init_inline(UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_il2cpp_TypeInfo_var);
+		UmAlQuraCalendar_CheckYearRange_mCEA99910DFF1659B5DD45B3C9A4502936A656E02(L_0, L_1, NULL);
+		int32_t L_2 = ___0_year;
+		int32_t L_3;
+		L_3 = UmAlQuraCalendar_RealGetDaysInYear_mA3740641CD7F52F6DAF785DC8B461B12782426F0(L_2, NULL);
+		return L_3;
+	}
+}
+// System.Int32 System.Globalization.UmAlQuraCalendar::GetEra(System.DateTime)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t UmAlQuraCalendar_GetEra_mD23C4511C9FB5C48582DCAAA89B777763AA1FE3F (UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B* __this, DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D ___0_time, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		int64_t L_0;
+		L_0 = DateTime_get_Ticks_mC2CF04ED0EAB425C72C2532FFC5743777F3C93A6((&___0_time), NULL);
+		il2cpp_codegen_runtime_class_init_inline(UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_il2cpp_TypeInfo_var);
+		UmAlQuraCalendar_CheckTicksRange_mBA2959172A68F005AA5CA882A79BC94E6CB9E58B(L_0, NULL);
+		return 1;
+	}
+}
+// System.Int32[] System.Globalization.UmAlQuraCalendar::get_Eras()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* UmAlQuraCalendar_get_Eras_mFE277C341C985383E166530A7DF10FFD57BB75B0 (UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_0 = (Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C*)(Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C*)SZArrayNew(Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C_il2cpp_TypeInfo_var, (uint32_t)1);
+		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_1 = L_0;
+		NullCheck(L_1);
+		(L_1)->SetAt(static_cast<il2cpp_array_size_t>(0), (int32_t)1);
+		return L_1;
+	}
+}
+// System.Int32 System.Globalization.UmAlQuraCalendar::GetMonth(System.DateTime)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t UmAlQuraCalendar_GetMonth_m737882DB7ED007A1ACC4A61F9F2D84C91CD92D2D (UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B* __this, DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D ___0_time, const RuntimeMethod* method) 
+{
+	{
+		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_0 = ___0_time;
+		int32_t L_1;
+		L_1 = VirtualFuncInvoker2< int32_t, DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D, int32_t >::Invoke(30 /* System.Int32 System.Globalization.UmAlQuraCalendar::GetDatePart(System.DateTime,System.Int32) */, __this, L_0, 2);
+		return L_1;
+	}
+}
+// System.Int32 System.Globalization.UmAlQuraCalendar::GetMonthsInYear(System.Int32,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t UmAlQuraCalendar_GetMonthsInYear_m44F5C8B0ED03DA666A15CCDB7A01F3511FD05E6D (UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B* __this, int32_t ___0_year, int32_t ___1_era, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		int32_t L_0 = ___0_year;
+		int32_t L_1 = ___1_era;
+		il2cpp_codegen_runtime_class_init_inline(UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_il2cpp_TypeInfo_var);
+		UmAlQuraCalendar_CheckYearRange_mCEA99910DFF1659B5DD45B3C9A4502936A656E02(L_0, L_1, NULL);
+		return ((int32_t)12);
+	}
+}
+// System.Int32 System.Globalization.UmAlQuraCalendar::GetYear(System.DateTime)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t UmAlQuraCalendar_GetYear_mC98C0C9CAD93BD3DEE3C67791C6413B43CAF2674 (UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B* __this, DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D ___0_time, const RuntimeMethod* method) 
+{
+	{
+		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_0 = ___0_time;
+		int32_t L_1;
+		L_1 = VirtualFuncInvoker2< int32_t, DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D, int32_t >::Invoke(30 /* System.Int32 System.Globalization.UmAlQuraCalendar::GetDatePart(System.DateTime,System.Int32) */, __this, L_0, 0);
+		return L_1;
+	}
+}
+// System.Boolean System.Globalization.UmAlQuraCalendar::IsLeapYear(System.Int32,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool UmAlQuraCalendar_IsLeapYear_mC9AB8C4956EB83D39D8FA67E3ABBBB8294D6423C (UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B* __this, int32_t ___0_year, int32_t ___1_era, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		int32_t L_0 = ___0_year;
+		int32_t L_1 = ___1_era;
+		il2cpp_codegen_runtime_class_init_inline(UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_il2cpp_TypeInfo_var);
+		UmAlQuraCalendar_CheckYearRange_mCEA99910DFF1659B5DD45B3C9A4502936A656E02(L_0, L_1, NULL);
+		int32_t L_2 = ___0_year;
+		int32_t L_3;
+		L_3 = UmAlQuraCalendar_RealGetDaysInYear_mA3740641CD7F52F6DAF785DC8B461B12782426F0(L_2, NULL);
+		if ((!(((uint32_t)L_3) == ((uint32_t)((int32_t)355)))))
+		{
+			goto IL_0016;
+		}
+	}
+	{
+		return (bool)1;
+	}
+
+IL_0016:
+	{
+		return (bool)0;
+	}
+}
+// System.DateTime System.Globalization.UmAlQuraCalendar::ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D UmAlQuraCalendar_ToDateTime_mA518A2073DCCFA2CEF560F22FD8D0FB8A6B9DDE7 (UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B* __this, int32_t ___0_year, int32_t ___1_month, int32_t ___2_day, int32_t ___3_hour, int32_t ___4_minute, int32_t ___5_second, int32_t ___6_millisecond, int32_t ___7_era, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	int32_t V_0 = 0;
+	int64_t V_1 = 0;
+	{
+		int32_t L_0 = ___2_day;
+		if ((((int32_t)L_0) < ((int32_t)1)))
+		{
+			goto IL_0014;
+		}
+	}
+	{
+		int32_t L_1 = ___2_day;
+		if ((((int32_t)L_1) > ((int32_t)((int32_t)29))))
+		{
+			goto IL_0014;
+		}
+	}
+	{
+		int32_t L_2 = ___0_year;
+		int32_t L_3 = ___1_month;
+		int32_t L_4 = ___7_era;
+		il2cpp_codegen_runtime_class_init_inline(UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_il2cpp_TypeInfo_var);
+		UmAlQuraCalendar_CheckYearMonthRange_mD7B80AB6ADA0B466AEED666697FD1CBBF85136B8(L_2, L_3, L_4, NULL);
+		goto IL_0052;
+	}
+
+IL_0014:
+	{
+		int32_t L_5 = ___0_year;
+		int32_t L_6 = ___1_month;
+		int32_t L_7 = ___7_era;
+		int32_t L_8;
+		L_8 = VirtualFuncInvoker3< int32_t, int32_t, int32_t, int32_t >::Invoke(13 /* System.Int32 System.Globalization.Calendar::GetDaysInMonth(System.Int32,System.Int32,System.Int32) */, __this, L_5, L_6, L_7);
+		V_0 = L_8;
+		int32_t L_9 = ___2_day;
+		if ((((int32_t)L_9) < ((int32_t)1)))
+		{
+			goto IL_0027;
+		}
+	}
+	{
+		int32_t L_10 = ___2_day;
+		int32_t L_11 = V_0;
+		if ((((int32_t)L_10) <= ((int32_t)L_11)))
+		{
+			goto IL_0052;
+		}
+	}
+
+IL_0027:
+	{
+		il2cpp_codegen_runtime_class_init_inline(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8FFA378E0_il2cpp_TypeInfo_var)));
+		CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8FFA378E0* L_12;
+		L_12 = CultureInfo_get_CurrentCulture_m8A4580F49DDD7E9DB34C699965423DB8E3BBA9A5(NULL);
+		String_t* L_13;
+		L_13 = Environment_GetResourceString_mA14837A574D24E2F2D120D7B5514E849E9986058(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral8455E83F4C8C16B9441E2078DFC4C41497ECDC81)), NULL);
+		int32_t L_14 = V_0;
+		int32_t L_15 = L_14;
+		RuntimeObject* L_16 = Box(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var)), &L_15);
+		int32_t L_17 = ___1_month;
+		int32_t L_18 = L_17;
+		RuntimeObject* L_19 = Box(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var)), &L_18);
+		String_t* L_20;
+		L_20 = String_Format_m44BF8BF44DC9B67D6CF265A1A2703A6D743F5C56(L_12, L_13, L_16, L_19, NULL);
+		ArgumentOutOfRangeException_tEA2822DAF62B10EEED00E0E3A341D4BAF78CF85F* L_21 = (ArgumentOutOfRangeException_tEA2822DAF62B10EEED00E0E3A341D4BAF78CF85F*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentOutOfRangeException_tEA2822DAF62B10EEED00E0E3A341D4BAF78CF85F_il2cpp_TypeInfo_var)));
+		NullCheck(L_21);
+		ArgumentOutOfRangeException__ctor_mE5B2755F0BEA043CACF915D5CE140859EE58FA66(L_21, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral645F0B83FF7CADECF44AD1B83B13002DA97FBA1E)), L_20, NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_21, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&UmAlQuraCalendar_ToDateTime_mA518A2073DCCFA2CEF560F22FD8D0FB8A6B9DDE7_RuntimeMethod_var)));
+	}
+
+IL_0052:
+	{
+		int32_t L_22 = ___0_year;
+		int32_t L_23 = ___1_month;
+		int32_t L_24 = ___2_day;
+		il2cpp_codegen_runtime_class_init_inline(UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_il2cpp_TypeInfo_var);
+		int64_t L_25;
+		L_25 = UmAlQuraCalendar_GetAbsoluteDateUmAlQura_mEB0C87D2A6A2BB4B0A4DBF07E40B22686AC9E179(L_22, L_23, L_24, NULL);
+		V_1 = L_25;
+		int64_t L_26 = V_1;
+		if ((((int64_t)L_26) < ((int64_t)((int64_t)0))))
+		{
+			goto IL_007f;
+		}
+	}
+	{
+		int64_t L_27 = V_1;
+		int32_t L_28 = ___3_hour;
+		int32_t L_29 = ___4_minute;
+		int32_t L_30 = ___5_second;
+		int32_t L_31 = ___6_millisecond;
+		int64_t L_32;
+		L_32 = Calendar_TimeToTicks_m93A6006E50E39BF9F143F25B2D078CD1639E72DB(L_28, L_29, L_30, L_31, NULL);
+		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_33;
+		memset((&L_33), 0, sizeof(L_33));
+		DateTime__ctor_m64AFCE84ABB24698256EB9F635EFD0A221823441((&L_33), ((int64_t)il2cpp_codegen_add(((int64_t)il2cpp_codegen_multiply(L_27, ((int64_t)864000000000LL))), L_32)), /*hidden argument*/NULL);
+		return L_33;
+	}
+
+IL_007f:
+	{
+		String_t* L_34;
+		L_34 = Environment_GetResourceString_mA14837A574D24E2F2D120D7B5514E849E9986058(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral5C41D52FA73299672D15406F85174D906E9E65DC)), NULL);
+		ArgumentOutOfRangeException_tEA2822DAF62B10EEED00E0E3A341D4BAF78CF85F* L_35 = (ArgumentOutOfRangeException_tEA2822DAF62B10EEED00E0E3A341D4BAF78CF85F*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentOutOfRangeException_tEA2822DAF62B10EEED00E0E3A341D4BAF78CF85F_il2cpp_TypeInfo_var)));
+		NullCheck(L_35);
+		ArgumentOutOfRangeException__ctor_mE5B2755F0BEA043CACF915D5CE140859EE58FA66(L_35, (String_t*)NULL, L_34, NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_35, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&UmAlQuraCalendar_ToDateTime_mA518A2073DCCFA2CEF560F22FD8D0FB8A6B9DDE7_RuntimeMethod_var)));
+	}
+}
+// System.Int32 System.Globalization.UmAlQuraCalendar::get_TwoDigitYearMax()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t UmAlQuraCalendar_get_TwoDigitYearMax_m713E3ECAAB7104C02063A0D7AC061D9456BD15AD (UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B* __this, const RuntimeMethod* method) 
+{
+	{
+		int32_t L_0 = ((Calendar_t0A117CC7532A54C17188C2EFEA1F79DB20DF3A3B*)__this)->___twoDigitYearMax_41;
+		if ((!(((uint32_t)L_0) == ((uint32_t)(-1)))))
+		{
+			goto IL_001f;
+		}
+	}
+	{
+		int32_t L_1;
+		L_1 = VirtualFuncInvoker0< int32_t >::Invoke(7 /* System.Int32 System.Globalization.Calendar::get_ID() */, __this);
+		int32_t L_2;
+		L_2 = Calendar_GetSystemTwoDigitYearSetting_mBA56944261CA5924319D54AAC19347884DEDD640(L_1, ((int32_t)1451), NULL);
+		((Calendar_t0A117CC7532A54C17188C2EFEA1F79DB20DF3A3B*)__this)->___twoDigitYearMax_41 = L_2;
+	}
+
+IL_001f:
+	{
+		int32_t L_3 = ((Calendar_t0A117CC7532A54C17188C2EFEA1F79DB20DF3A3B*)__this)->___twoDigitYearMax_41;
+		return L_3;
+	}
+}
+// System.Void System.Globalization.UmAlQuraCalendar::set_TwoDigitYearMax(System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UmAlQuraCalendar_set_TwoDigitYearMax_m38A5C335F6871E9DEEF444FAFF8EDC592232A389 (UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B* __this, int32_t ___0_value, const RuntimeMethod* method) 
+{
+	{
+		int32_t L_0 = ___0_value;
+		if ((((int32_t)L_0) == ((int32_t)((int32_t)99))))
+		{
+			goto IL_0048;
+		}
+	}
+	{
+		int32_t L_1 = ___0_value;
+		if ((((int32_t)L_1) < ((int32_t)((int32_t)1318))))
+		{
+			goto IL_0015;
+		}
+	}
+	{
+		int32_t L_2 = ___0_value;
+		if ((((int32_t)L_2) <= ((int32_t)((int32_t)1500))))
+		{
+			goto IL_0048;
+		}
+	}
+
+IL_0015:
+	{
+		il2cpp_codegen_runtime_class_init_inline(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8FFA378E0_il2cpp_TypeInfo_var)));
+		CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8FFA378E0* L_3;
+		L_3 = CultureInfo_get_CurrentCulture_m8A4580F49DDD7E9DB34C699965423DB8E3BBA9A5(NULL);
+		String_t* L_4;
+		L_4 = Environment_GetResourceString_mA14837A574D24E2F2D120D7B5514E849E9986058(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralCB6B67D4653121AE0F63EE256975A0DBD0FAF6B1)), NULL);
+		int32_t L_5 = ((int32_t)1318);
+		RuntimeObject* L_6 = Box(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var)), &L_5);
+		int32_t L_7 = ((int32_t)1500);
+		RuntimeObject* L_8 = Box(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var)), &L_7);
+		String_t* L_9;
+		L_9 = String_Format_m44BF8BF44DC9B67D6CF265A1A2703A6D743F5C56(L_3, L_4, L_6, L_8, NULL);
+		ArgumentOutOfRangeException_tEA2822DAF62B10EEED00E0E3A341D4BAF78CF85F* L_10 = (ArgumentOutOfRangeException_tEA2822DAF62B10EEED00E0E3A341D4BAF78CF85F*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentOutOfRangeException_tEA2822DAF62B10EEED00E0E3A341D4BAF78CF85F_il2cpp_TypeInfo_var)));
+		NullCheck(L_10);
+		ArgumentOutOfRangeException__ctor_mE5B2755F0BEA043CACF915D5CE140859EE58FA66(L_10, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral46F273EF641E07D271D91E0DC24A4392582671F8)), L_9, NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_10, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&UmAlQuraCalendar_set_TwoDigitYearMax_m38A5C335F6871E9DEEF444FAFF8EDC592232A389_RuntimeMethod_var)));
+	}
+
+IL_0048:
+	{
+		Calendar_VerifyWritable_mE43638F89F4F48297B873BCE30746F54D445B337(__this, NULL);
+		int32_t L_11 = ___0_value;
+		((Calendar_t0A117CC7532A54C17188C2EFEA1F79DB20DF3A3B*)__this)->___twoDigitYearMax_41 = L_11;
+		return;
+	}
+}
+// System.Int32 System.Globalization.UmAlQuraCalendar::ToFourDigitYear(System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t UmAlQuraCalendar_ToFourDigitYear_m3C3B790D27276010B76DA0CD8295157330189BE8 (UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B* __this, int32_t ___0_year, const RuntimeMethod* method) 
+{
+	{
+		int32_t L_0 = ___0_year;
+		if ((((int32_t)L_0) >= ((int32_t)0)))
+		{
+			goto IL_0019;
+		}
+	}
+	{
+		String_t* L_1;
+		L_1 = Environment_GetResourceString_mA14837A574D24E2F2D120D7B5514E849E9986058(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral38E3DBC7FC353425EF3A98DC8DAC6689AF5FD1BE)), NULL);
+		ArgumentOutOfRangeException_tEA2822DAF62B10EEED00E0E3A341D4BAF78CF85F* L_2 = (ArgumentOutOfRangeException_tEA2822DAF62B10EEED00E0E3A341D4BAF78CF85F*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentOutOfRangeException_tEA2822DAF62B10EEED00E0E3A341D4BAF78CF85F_il2cpp_TypeInfo_var)));
+		NullCheck(L_2);
+		ArgumentOutOfRangeException__ctor_mE5B2755F0BEA043CACF915D5CE140859EE58FA66(L_2, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral1DEDCD1168FE0A01C595FF5B7901D1C14F15F786)), L_1, NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_2, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&UmAlQuraCalendar_ToFourDigitYear_m3C3B790D27276010B76DA0CD8295157330189BE8_RuntimeMethod_var)));
+	}
+
+IL_0019:
+	{
+		int32_t L_3 = ___0_year;
+		if ((((int32_t)L_3) >= ((int32_t)((int32_t)100))))
+		{
+			goto IL_0026;
+		}
+	}
+	{
+		int32_t L_4 = ___0_year;
+		int32_t L_5;
+		L_5 = Calendar_ToFourDigitYear_m19E0969391053AEC74874CB0FC41F59868E83DC5(__this, L_4, NULL);
+		return L_5;
+	}
+
+IL_0026:
+	{
+		int32_t L_6 = ___0_year;
+		if ((((int32_t)L_6) < ((int32_t)((int32_t)1318))))
+		{
+			goto IL_0036;
+		}
+	}
+	{
+		int32_t L_7 = ___0_year;
+		if ((((int32_t)L_7) <= ((int32_t)((int32_t)1500))))
+		{
+			goto IL_0069;
+		}
+	}
+
+IL_0036:
+	{
+		il2cpp_codegen_runtime_class_init_inline(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8FFA378E0_il2cpp_TypeInfo_var)));
+		CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8FFA378E0* L_8;
+		L_8 = CultureInfo_get_CurrentCulture_m8A4580F49DDD7E9DB34C699965423DB8E3BBA9A5(NULL);
+		String_t* L_9;
+		L_9 = Environment_GetResourceString_mA14837A574D24E2F2D120D7B5514E849E9986058(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralCB6B67D4653121AE0F63EE256975A0DBD0FAF6B1)), NULL);
+		int32_t L_10 = ((int32_t)1318);
+		RuntimeObject* L_11 = Box(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var)), &L_10);
+		int32_t L_12 = ((int32_t)1500);
+		RuntimeObject* L_13 = Box(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var)), &L_12);
+		String_t* L_14;
+		L_14 = String_Format_m44BF8BF44DC9B67D6CF265A1A2703A6D743F5C56(L_8, L_9, L_11, L_13, NULL);
+		ArgumentOutOfRangeException_tEA2822DAF62B10EEED00E0E3A341D4BAF78CF85F* L_15 = (ArgumentOutOfRangeException_tEA2822DAF62B10EEED00E0E3A341D4BAF78CF85F*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentOutOfRangeException_tEA2822DAF62B10EEED00E0E3A341D4BAF78CF85F_il2cpp_TypeInfo_var)));
+		NullCheck(L_15);
+		ArgumentOutOfRangeException__ctor_mE5B2755F0BEA043CACF915D5CE140859EE58FA66(L_15, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral1DEDCD1168FE0A01C595FF5B7901D1C14F15F786)), L_14, NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_15, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&UmAlQuraCalendar_ToFourDigitYear_m3C3B790D27276010B76DA0CD8295157330189BE8_RuntimeMethod_var)));
+	}
+
+IL_0069:
+	{
+		int32_t L_16 = ___0_year;
+		return L_16;
+	}
+}
+// System.Void System.Globalization.UmAlQuraCalendar::.cctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UmAlQuraCalendar__cctor_m00670E92C567B055E85ED9A1EDF8EF08112CEE61 (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	{
+		DateMappingU5BU5D_tAE26CCACFFC820ECD4675D0D35E04EF7D2A7BA0A* L_0;
+		L_0 = UmAlQuraCalendar_InitDateMapping_mB6C5F95BFC613BE36E279C4339703FE29D06271F(NULL);
+		((UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_StaticFields*)il2cpp_codegen_static_fields_for(UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_il2cpp_TypeInfo_var))->___HijriYearInfo_42 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&((UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_StaticFields*)il2cpp_codegen_static_fields_for(UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_il2cpp_TypeInfo_var))->___HijriYearInfo_42), (void*)L_0);
+		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_1;
+		memset((&L_1), 0, sizeof(L_1));
+		DateTime__ctor_mA3BF7CE28807F0A02634FD43913FAAFD989CEE88((&L_1), ((int32_t)1900), 4, ((int32_t)30), /*hidden argument*/NULL);
+		((UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_StaticFields*)il2cpp_codegen_static_fields_for(UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_il2cpp_TypeInfo_var))->___minDate_43 = L_1;
+		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_2;
+		memset((&L_2), 0, sizeof(L_2));
+		DateTime__ctor_mA66CE5141E86C5BC75F79543F99A7BD77B420201((&L_2), ((int32_t)2077), ((int32_t)11), ((int32_t)16), ((int32_t)23), ((int32_t)59), ((int32_t)59), ((int32_t)999), /*hidden argument*/NULL);
+		V_0 = L_2;
+		int64_t L_3;
+		L_3 = DateTime_get_Ticks_mC2CF04ED0EAB425C72C2532FFC5743777F3C93A6((&V_0), NULL);
+		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_4;
+		memset((&L_4), 0, sizeof(L_4));
+		DateTime__ctor_m64AFCE84ABB24698256EB9F635EFD0A221823441((&L_4), ((int64_t)il2cpp_codegen_add(L_3, ((int64_t)((int32_t)9999)))), /*hidden argument*/NULL);
+		((UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_StaticFields*)il2cpp_codegen_static_fields_for(UmAlQuraCalendar_tE0B5A6EEC29AE1EFC40F338F5EBCEC112E44743B_il2cpp_TypeInfo_var))->___maxDate_44 = L_4;
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
@@ -16757,6 +18659,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CultureInfo__cctor_m30556E56CA6D56979DEB
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t GregorianCalendarHelper_get_MaxYear_m8D9E6AA725B30F672528D32EC4F97E5D715346EA_inline (GregorianCalendarHelper_tC77507376E36EEDABC1786237BADF1BF459F9723* __this, const RuntimeMethod* method) 
+{
+	{
+		int32_t L_0 = __this->___m_maxYear_2;
+		return L_0;
+	}
+}
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t String_get_Length_m42625D67623FA5CC7A44D47425CE86FB946542D2_inline (String_t* __this, const RuntimeMethod* method) 
 {
 	{

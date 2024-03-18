@@ -36,4 +36,9 @@ public class sceneLoading : MonoBehaviour
     {
         SceneManager.LoadScene("WELL");
     }
+
+    public void loadGrabTry()
+    {
+        SceneManager.LoadScene("GRAB");
+    }
 }
